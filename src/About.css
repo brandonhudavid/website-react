@@ -1,0 +1,282 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-image: url(img/bd-quarter.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #414141;
+}
+
+nav {
+    float: right;
+    font-family: Karla, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#about-container {
+    float: right;
+    width: 60%;
+}
+
+#logo img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    transition: ease 0.25s;
+}
+
+#logo img:hover {
+    opacity: 1;
+}
+
+header {
+    margin-top: 20px;
+}
+
+header a {
+    color: #414141;
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+.unselected {
+    opacity: 0.5;
+    transition: ease 0.25s;
+}
+
+.unselected:hover {
+    opacity: 1;
+}
+
+h1 {
+    font-family: Overpass, Helvetica, sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 72px;
+}
+
+h2 {
+    font-family: Karla, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+p {
+    font-family: Karla, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.action-link {
+    text-decoration: underline;
+    float: right;
+    font-weight: 700;
+}
+
+.pastworks {
+    color: #414141;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: ease 0.25s;
+    
+}
+.clickable:hover {
+    color: #f37120;
+}
+
+.orange {
+    color: #f37120;
+    font-weight: 700;
+}
+
+.titles {
+    float: right;
+    text-align: right;
+    color: #414141;
+    text-decoration: none;
+    margin-bottom: auto;
+}
+
+.blurbs {
+    float: right;
+    text-align: right;
+    color: #414141;
+}
+
+.berkeley {
+    color: navy;
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.berkeley:hover {
+    color: white;
+    background-color: navy;
+}
+
+.optimizely {
+    color: #0037fe;
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.optimizely:hover {
+    color: white;
+    background-color: #0037fe;
+}
+
+.here {
+    color: rgba(0, 175, 170, 1);
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.here:hover {
+    color: white;
+    background-color: rgba(0, 175, 170, 1);
+}
+
+.mdb {
+    color: #58c0ff;
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.mdb:hover {
+    color: white;
+    background-color: #58c0ff;
+}
+
+.innod {
+    color: #1b93c0;
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.innod:hover {
+    color: white;
+    background-color: #1b93c0;
+}
+
+.brandon {
+    display: inline-block;
+    width: 280px;
+}
+
+.selected {
+    color: #f37120;
+    text-decoration: underline;
+}
+
+.social {
+    float: left;
+    width: 50%;
+}
+
+.social img {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    /* margin: auto; */
+    float: left;
+    width: 52px;
+    height: 52px;
+    opacity: 0.5;
+    transition: ease 0.25s;
+}
+
+.social img:hover {
+    opacity: 1;
+}
+
+@media (orientation: portrait) {
+
+    #container {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    /* #about-container {
+        float: none;
+        width: 100%;
+    } */
+    
+    body {
+        width: 90%;
+        background-image: url(img/bd-square.png);
+    }
+    
+    #logo img {
+        float: left;
+        width: 40px;
+        height: 40px;
+    }
+    
+    nav {
+        font-size: 20px;
+    }
+    
+    .titles {
+        text-align: center;
+        float: none;
+        margin-bottom: 20px;
+    }
+    
+    .blurbs {
+        text-align: center;
+        float: none;
+        margin-left: 0;
+        display: inline-block;
+    }
+    
+    h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    
+    h2 {
+        padding-top: 20px;
+        font-size: 24px;
+    }
+    
+    .action-link {
+        text-align: center;
+        display: block;
+    }
+
+    .brandon {
+        width: 200px;
+        display: block;
+        margin: auto;
+    }
+
+    .social {
+        width: 100%;
+        float: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social img {
+        float: none;
+        width: 10vw;
+        height: 10vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        opacity: 1;
+    }
+}
