@@ -89,9 +89,9 @@ export class About extends React.Component {
                     </div>
                 </div>
                 <div>
-                <div ref="vi" className="social">
-                    <a href="https://linkedin.com/in/brandonhudavid" target="_blank"><img src={linkedin} /></a>
-                    <a href="https://github.com/brandonhudavid" target="_blank"><img src={github} /></a>
+                <div className="social">
+                    <a href="https://linkedin.com/in/brandonhudavid" target="_blank"><img ref="vi" src={linkedin} /></a>
+                    <a href="https://github.com/brandonhudavid" target="_blank"><img ref="vi" src={github} /></a>
                 </div>
                 <a href={resume} target="_blank"><h2 ref="iv" className="blurbs action-link clickable">Click here for my resume.</h2></a>
             </div>

@@ -53,12 +53,16 @@ export class Home extends React.Component {
             <div>
                 <div ref="iv" className="react"><p><i>{"< /> with React"}</i>&nbsp;&nbsp;{"⚛️✨"}</p></div>
                 <div id="home-container" style={{marginTop: 8 + '%'}}>
-                    <h1 ref='i' className="titles"><a className="clickable">BRANDON DAVID</a></h1>
-                    <h2 ref='ii' className="blurbs">
-                        Aspiring <a className="orange">developer</a> and <a className="orange">designer.</a><br/>
-                        Rising third-year at UC Berkeley.<br/>
-                        Electrical Engineering and Computer Science. <br/>
-                    </h2>
+                    <div style={{width: 100 + '%', display: 'inline-block'}}>
+                        <h1 ref='i' className="titles"><a className="clickable">BRANDON DAVID</a></h1>
+                    </div>
+                    <div style={{width: 100 + '%', display: 'inline-block'}}>
+                        <h2 ref='ii' className="blurbs">
+                            Aspiring <a className="orange">developer</a> and <a className="orange">designer.</a><br/>
+                            Rising third-year at UC Berkeley.<br/>
+                            Electrical Engineering and Computer Science. <br/>
+                        </h2>
+                    </div>
                 </div>
             </div>
         );
