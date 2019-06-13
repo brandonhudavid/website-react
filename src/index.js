@@ -17,8 +17,10 @@ import swe_off from "./img/swe-off.png"
 import ios_off from "./img/ios-off.png"
 import product_off from "./img/product-off.png"
 import graphic_off from "./img/graphic-off.png"
+import Bounce from 'react-reveal/Bounce';
 
 class Portfolio extends React.Component {
+    
 
     componentDidMount = () => {
         const config = {
@@ -107,8 +109,10 @@ class Portfolio extends React.Component {
                 <div id="container">
                     <div>
                         {this.filterProjects().map((project, index) =>
-                            <Project id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} onClick={() => this.toProject(project.id)} />
-                            )}
+                            <div className="clickable" onClick={() => this.props.fn(project.id)}>
+                                <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -131,6 +135,7 @@ class App extends React.Component {
             filters: []
         }
     }
+    
 
     componentDidMount = () => {
         const config = {
@@ -152,6 +157,7 @@ class App extends React.Component {
           }
           sr.reveal(this.refs.buttons, config2)
     }
+    
 
     isHome() {
         if (this.state.home) {
@@ -201,6 +207,17 @@ class App extends React.Component {
         })
     }
 
+    toProject = (id) => {
+        window.scrollTo(0, 0);
+        this.setState({
+            currentPage: "Project",
+            home: false,
+            about: false,
+            folio: false,
+            project: id
+        })
+    }
+
     currentPage() {
         switch(this.state.currentPage) {
             case "Home":
@@ -208,9 +225,16 @@ class App extends React.Component {
             case "About":
                 return <About />;
             case "Portfolio":
-                return <Portfolio filters={this.state.filters} />;
+                return <Portfolio filters={this.state.filters} fn={this.toProject} />;
+            case "Project":
+                switch(this.state.project) {
+                    case "habbit":
+                        return <Habbit />
+                    default:
+                        return;
+                }
             default:
-                break;
+                return;
         }
     }
 
@@ -218,9 +242,11 @@ class App extends React.Component {
         if (this.state.currentPage == "Home") {
             return (
                 <div>
+                    <Bounce right delay={200}>
                     <h2 ref='pastworks' className="blurbs">
                         <div className="action-link" onClick={() => this.toFolio()}><a className="pastworks clickable">Check out some of my past works.</a></div>
                     </h2>
+                    </Bounce>
                 </div>
             );
         }
@@ -250,6 +276,8 @@ class App extends React.Component {
                     </div>
                 </div>
             );
+        } else {
+            return
         }
     }
 
@@ -315,10 +343,6 @@ class App extends React.Component {
         this.setState({
             filters: newFilters
         })
-    }
-
-    toProject(id) {
-        return <id />;
     }
 
     render() {

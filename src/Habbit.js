@@ -6,20 +6,42 @@ export class Habbit extends React.Component {
 
     constructor(props) {
         super(props);
+        
+    }
+
+    componentDidMount = () => {
+        const config = {
+          origin: 'right',
+          duration: 500,
+          delay: 100,
+          distance: '50px',
+          scale: 1,
+          easing: 'ease',
+        }
+        sr.reveal(this.refs.right, config)
+        const config2 = {
+            origin: 'left',
+            duration: 500,
+            delay: 200,
+            distance: '50px',
+            scale: 1,
+            easing: 'ease',
+          }
+          sr.reveal(this.refs.left, config2)
     }
 
     render() {
         return (
             <div>
-                <div>
+                <div ref="left">
                     <subtitle className="background">
                         Background
                     </subtitle>
                     <p className="background bg-writeup">
-                        UC Berkeley's iOS DeCal is a student-led class offered to those who want to learn how to use Swift and make iPhone apps. The final project is to create an iOS app from scratch. My project partner, <a id="hi-orange" href="http://irishou.me" target="_blank">Iris Hou,</a> and I wanted to make an app that would improve the efficiency of people's everyday lives.
+                        UC Berkeley's iOS DeCal is a student-led class offered to those who want to learn how to use Swift and make iPhone apps. The final project is to create an iOS app from scratch. My project partner, <a href="http://irishou.me" className="orange" target="_blank">Iris Hou,</a> and I wanted to make an app that would improve the efficiency of people's everyday lives.
                     </p>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Routine is difficult.
                     </subtitle>
@@ -27,7 +49,7 @@ export class Habbit extends React.Component {
                         Often times, people set goals for themselves—casual or ambitious—that can be attained through habitual efforts. However, being motivated to follow a consistent routine can be difficult. Also, once the routine is broken, it can be hard to get back in rhythm.
                     </p>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Inspiration from bullet journaling.
                     </subtitle>
@@ -43,7 +65,7 @@ export class Habbit extends React.Component {
                         Carrying around a bullet journal can be troublesome and could result in damaging the journal over time. On the other hand, having a mobile app as a tracker is much more convenient. People bring their phones everywhere, and the tracker would be beneficial to those without bullet journals.
                     </p>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Introducing <orange>Habbit,</orange> the mobile habit tracker.
                     </subtitle>
@@ -51,7 +73,7 @@ export class Habbit extends React.Component {
                         <orange><b>Habbit</b></orange> is an iOS app that helps you keep up with healthy daily <orange><b><i>habbits.</i></b></orange> Keeping track of your habbits is as simple as tapping an icon. Look at habbits you've completed in the past with the <orange><b>tracker</b></orange> feature. Set and fulfill your goals efficiently with Habbit.
                     </p>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Logo design and color scheme.
                     </subtitle>
@@ -64,7 +86,7 @@ export class Habbit extends React.Component {
                         <a href="css/src/habbit/habbit-logo2.png" target="_blank"><img data-sr="enter bottom move 50px wait 0.3s" class="proj-img habbit1 shadow" src="css/src/habbit/habbit-logo2.png"/></a>
                     </div>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Low fidelity designs and wireframes.
                     </subtitle>
@@ -78,7 +100,7 @@ export class Habbit extends React.Component {
                         <a href="css/src/habbit/habbit-backend.png" target="_blank"><img data-sr="enter bottom move 50px wait 0.3s" class="proj-img habbit1 shadow" src="css/src/habbit/habbit-backend.png"/></a>
                     </div>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Tutorial for new users.
                     </subtitle>
@@ -89,7 +111,7 @@ export class Habbit extends React.Component {
                         <a href="css/src/habbit/habbit-tutorial.gif" target="_blank"><img class="proj-img habbit3" src="css/src/habbit/habbit-tutorial.gif"/></a>
                     </div>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Creating, performing, and deleting habbits.
                     </subtitle>
@@ -100,7 +122,7 @@ export class Habbit extends React.Component {
                         <a href="css/src/habbit/habbit-perform.gif" target="_blank"><img class="proj-img habbit3" src="css/src/habbit/habbit-perform.gif"/></a>
                     </div>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Using the tracker.
                     </subtitle>
@@ -111,7 +133,7 @@ export class Habbit extends React.Component {
                         <a href="css/src/habbit/habbit-tracker.gif" target="_blank"><img class="proj-img habbit3" src="css/src/habbit/habbit-tracker.gif"/></a>
                     </div>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Reflections
                     </subtitle>
@@ -126,7 +148,7 @@ export class Habbit extends React.Component {
                         <img data-sr="enter bottom move 50px wait 0.2s" class="proj-img habbit0 shadow" src="css/src/habbit/habbit-photo.JPG"/>
                     </div>
                 </div>
-                <div>
+                <div ref="right">
                     <subtitle>
                         Acknowledgments
                     </subtitle>
