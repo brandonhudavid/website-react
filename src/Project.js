@@ -67,7 +67,7 @@ export class Project extends React.Component {
 
     render() {
         return (
-            <a>
+            <a href="habbit.html">
                 <div ref={this.props.index % 2 == 0 ? "left" : "right"} class={this.props.index % 2 == 0 ? "proj-panel left" : "proj-panel right"}>
                     <img src={this.projImage(this.props.id)} class="proj-panel-image shadow" />
                     <div id={this.props.id} class="overlay">

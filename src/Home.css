@@ -12,6 +12,31 @@ body {
     color: #414141;
 }
 
+subtitle {
+    font-family: Overpass, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    margin: auto;
+    line-height: 48px;
+    display: inline-block;
+}
+
+.background {
+    display: block;
+    text-align: right;
+}
+
+.bg-writeup {
+    width: 80%;
+    float: right;
+    margin-bottom: 40px;
+}
+
+.writeup {
+    width: 80%;
+    padding-bottom: 40px;
+}
+
 nav {
     float: right;
     font-family: Karla, Helvetica, sans-serif;
