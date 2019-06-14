@@ -29,11 +29,13 @@ subtitle {
 .bg-writeup {
     width: 80%;
     float: right;
+    margin: auto;
     margin-bottom: 40px;
 }
 
 .writeup {
     width: 80%;
+    margin: auto;
     padding-bottom: 40px;
 }
 
@@ -190,6 +192,44 @@ orange {
     background-color: #f37120;
 }
 
+.proj-collection {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    vertical-align: center;
+    text-align: center;
+    float: none;
+}
+
+.proj-shadow {
+    box-shadow: 10px 10px 20px rgba(64, 64, 64, 0.15);
+}
+
+.proj-img20 {
+    vertical-align: middle;
+    width: 20%;
+    margin: -4% 5% 3.5% 0;
+}
+
+.proj-photo {
+    width: 50%;
+}
+
+.triple-column {
+    width: 100%;
+    display: block;
+}
+
+.column {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.proj-gif {
+    margin: -5% 0 5% 0;
+}
+
 @media (orientation: portrait) {
 
     #container {
@@ -203,9 +243,10 @@ orange {
     
     body {
         width: 90%;
+        margin: auto;
         background-image: url(img/bd-square.png);
     }
-    
+
     #logo img {
         float: left;
         width: 40px;
@@ -231,6 +272,12 @@ orange {
         text-align: center;
         margin-left: 0;
         display: inline-block;
+    }
+
+    subtitle {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 16px;
     }
     
     h1 {
@@ -275,4 +322,24 @@ orange {
     .buttonBox:hover .hoverButton {
         opacity: 0;
       }
+
+    .proj-img20 {
+        width: 100%;
+        margin: 0 0 10% 0;
+    }
+
+    .proj-photo {
+        width: 80%;
+        margin: -5% 0 5% 0;
+    }
+
+    .column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .proj-gif {
+        justify-content: center;
+        text-align: center;
+    }
 }

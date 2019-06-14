@@ -6,62 +6,62 @@ import Project from "./Project"
 
 export class Portfolio extends React.Component {
 
-    componentDidMount = () => {
-        const config = {
-          origin: 'right',
-          duration: 500,
-          delay: 100,
-          distance: '50px',
-          scale: 1,
-          easing: 'ease',
-        }
-        sr.reveal(this.refs.i, config)
-        const config2 = {
-            origin: 'right',
-            duration: 500,
-            delay: 200,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.ii, config2)
-          const config3 = {
-            origin: 'right',
-            duration: 500,
-            delay: 300,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.iii, config3)
-          const config4 = {
-            origin: 'right',
-            duration: 500,
-            delay: 400,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.iv, config4)
-          const config5 = {
-            origin: 'left',
-            duration: 500,
-            delay: 200,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.v, config5)
-          const config6 = {
-            origin: 'left',
-            duration: 500,
-            delay: 400,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.vi, config6)
-    }
+    // componentDidMount = () => {
+    //     const config = {
+    //       origin: 'right',
+    //       duration: 500,
+    //       delay: 100,
+    //       distance: '50px',
+    //       scale: 1,
+    //       easing: 'ease',
+    //     }
+    //     sr.reveal(this.refs.i, config)
+    //     const config2 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 200,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.ii, config2)
+    //       const config3 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 300,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.iii, config3)
+    //       const config4 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 400,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.iv, config4)
+    //       const config5 = {
+    //         origin: 'left',
+    //         duration: 500,
+    //         delay: 200,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.v, config5)
+    //       const config6 = {
+    //         origin: 'left',
+    //         duration: 500,
+    //         delay: 400,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.vi, config6)
+    // }
 
     filterProjects() {
         let proj = [];

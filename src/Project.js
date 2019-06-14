@@ -15,26 +15,26 @@ import sr from './ScrollReveal'
 
 export class Project extends React.Component {
 
-    componentDidMount = () => {
-        const config = {
-          origin: 'bottom',
-          duration: 500,
-          delay: 200,
-          distance: '50px',
-          scale: 1,
-          easing: 'ease',
-        }
-        sr.reveal(this.refs.left, config)
-        const config2 = {
-            origin: 'bottom',
-            duration: 500,
-            delay: 200,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-        }
-        sr.reveal(this.refs.right, config2)
-    }
+    // componentDidMount = () => {
+    //     const config = {
+    //       origin: 'bottom',
+    //       duration: 500,
+    //       delay: 200,
+    //       distance: '50px',
+    //       scale: 1,
+    //       easing: 'ease',
+    //     }
+    //     sr.reveal(this.refs.left, config)
+    //     const config2 = {
+    //         origin: 'bottom',
+    //         duration: 500,
+    //         delay: 200,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //     }
+    //     sr.reveal(this.refs.right, config2)
+    // }
 
     projImage(id) {
         switch(id) {
@@ -80,7 +80,6 @@ export class Project extends React.Component {
                     </div>
                 </div>
             </a>
-
         );
     }
 

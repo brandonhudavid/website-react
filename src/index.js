@@ -22,62 +22,62 @@ import Bounce from 'react-reveal/Bounce';
 class Portfolio extends React.Component {
     
 
-    componentDidMount = () => {
-        const config = {
-          origin: 'right',
-          duration: 500,
-          delay: 100,
-          distance: '50px',
-          scale: 1,
-          easing: 'ease',
-        }
-        sr.reveal(this.refs.i, config)
-        const config2 = {
-            origin: 'right',
-            duration: 500,
-            delay: 200,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.ii, config2)
-          const config3 = {
-            origin: 'right',
-            duration: 500,
-            delay: 300,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.iii, config3)
-          const config4 = {
-            origin: 'right',
-            duration: 500,
-            delay: 400,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.iv, config4)
-          const config5 = {
-            origin: 'left',
-            duration: 500,
-            delay: 200,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.v, config5)
-          const config6 = {
-            origin: 'left',
-            duration: 500,
-            delay: 400,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.vi, config6)
-    }
+    // componentDidMount = () => {
+    //     const config = {
+    //       origin: 'right',
+    //       duration: 500,
+    //       delay: 100,
+    //       distance: '50px',
+    //       scale: 1,
+    //       easing: 'ease',
+    //     }
+    //     sr.reveal(this.refs.i, config)
+    //     const config2 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 200,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.ii, config2)
+    //       const config3 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 300,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.iii, config3)
+    //       const config4 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 400,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.iv, config4)
+    //       const config5 = {
+    //         origin: 'left',
+    //         duration: 500,
+    //         delay: 200,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.v, config5)
+    //       const config6 = {
+    //         origin: 'left',
+    //         duration: 500,
+    //         delay: 400,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.vi, config6)
+    // }
 
     filterProjects() {
         let proj = [];
@@ -103,15 +103,50 @@ class Portfolio extends React.Component {
         return proj;
     }
 
+    bounceDirection(project, index) {
+        if (index == 0) {
+            return (
+                <Bounce left>
+                    <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+                        <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+                    </div>
+                </Bounce>
+            )
+        }
+        if (index == 1) {
+            return (
+                <Bounce right delay={100}>
+                    <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+                        <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+                    </div>
+                </Bounce>
+            )
+        }
+        if (index % 2 == 0) {
+            return (
+                <Bounce left delay={200}>
+                    <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+                        <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+                    </div>
+                </Bounce>
+            )
+        }
+        return (
+            <Bounce right delay={250}>
+                <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+                    <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+                </div>
+            </Bounce>
+        )
+    }
+
     render(){
         return (
             <div>
                 <div id="container">
                     <div>
                         {this.filterProjects().map((project, index) =>
-                            <div className="clickable" onClick={() => this.props.fn(project.id)}>
-                                <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-                            </div>
+                            this.bounceDirection(project, index)
                         )}
                     </div>
                 </div>
@@ -137,26 +172,26 @@ class App extends React.Component {
     }
     
 
-    componentDidMount = () => {
-        const config = {
-          origin: 'right',
-          duration: 500,
-          delay: 300,
-          distance: '50px',
-          scale: 1,
-          easing: 'ease',
-        }
-        sr.reveal(this.refs.pastworks, config)
-        const config2 = {
-            origin: 'right',
-            duration: 500,
-            delay: 100,
-            distance: '50px',
-            scale: 1,
-            easing: 'ease',
-          }
-          sr.reveal(this.refs.buttons, config2)
-    }
+    // componentDidMount = () => {
+    //     const config = {
+    //       origin: 'right',
+    //       duration: 500,
+    //       delay: 300,
+    //       distance: '50px',
+    //       scale: 1,
+    //       easing: 'ease',
+    //     }
+    //     sr.reveal(this.refs.pastworks, config)
+    //     const config2 = {
+    //         origin: 'right',
+    //         duration: 500,
+    //         delay: 100,
+    //         distance: '50px',
+    //         scale: 1,
+    //         easing: 'ease',
+    //       }
+    //       sr.reveal(this.refs.buttons, config2)
+    // }
     
 
     isHome() {
@@ -256,24 +291,28 @@ class App extends React.Component {
         if (this.state.currentPage == "Portfolio") {
             return (
                 <div>
-                    <div>
-                        <h1 ref='buttons' class="titles" style={{marginTop: 'auto'}}>Past Works</h1>
-                        <div ref='pastworks' className="filter"><h3>Click on the buttons below to filter through my projects.</h3></div>
-                    </div>
-                    <div className='projects'>
-                        <div className="buttonBox" onClick={() => this.toggleButton("sweFilter")}>
-                            <img src={swe_off} className="button" />
-                            <div className={this.state.sweFilter ? "hoverButtonOn" : "hoverButton"}><img src={swe_on} className="button" /></div>
+                    <Bounce top>
+                        <div>
+                            <h1 ref='buttons' class="titles" style={{marginTop: 'auto'}}>Past Works</h1>
+                            <div ref='pastworks' className="filter"><h3>Click on the buttons below to filter through my projects.</h3></div>
                         </div>
-                        <div className="buttonBox" onClick={() => this.toggleButton("productFilter")}>
-                            <img src={product_off} className="button" />
-                            <div className={this.state.productFilter ? "hoverButtonOn" : "hoverButton"}><img src={product_on} className="button" /></div>
+                    </Bounce>
+                    <Bounce right delay={100}>
+                        <div className='projects'>
+                            <div className="buttonBox" onClick={() => this.toggleButton("sweFilter")}>
+                                <img src={swe_off} className="button" />
+                                <div className={this.state.sweFilter ? "hoverButtonOn" : "hoverButton"}><img src={swe_on} className="button" /></div>
+                            </div>
+                            <div className="buttonBox" onClick={() => this.toggleButton("productFilter")}>
+                                <img src={product_off} className="button" />
+                                <div className={this.state.productFilter ? "hoverButtonOn" : "hoverButton"}><img src={product_on} className="button" /></div>
+                            </div>
+                            <div className="buttonBox" onClick={() => this.toggleButton("graphicFilter")}>
+                                <img src={graphic_off} className="button" />
+                                <div className={this.state.graphicFilter ? "hoverButtonOn" : "hoverButton"}><img src={graphic_on} className="button" /></div>
+                            </div>
                         </div>
-                        <div className="buttonBox" onClick={() => this.toggleButton("graphicFilter")}>
-                            <img src={graphic_off} className="button" />
-                            <div className={this.state.graphicFilter ? "hoverButtonOn" : "hoverButton"}><img src={graphic_on} className="button" /></div>
-                        </div>
-                    </div>
+                    </Bounce>
                 </div>
             );
         } else {
