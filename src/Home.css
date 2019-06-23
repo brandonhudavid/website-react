@@ -17,12 +17,15 @@ subtitle {
     font-size: 48px;
     font-weight: 800;
     margin: auto;
+    margin-bottom: 1%;
+    margin-top: 0;
     line-height: 48px;
+    width: 100%;
     display: inline-block;
 }
 
 .background {
-    display: block;
+    display: inline-block;
     text-align: right;
 }
 
@@ -35,6 +38,8 @@ subtitle {
 
 .writeup {
     width: 80%;
+    float: left;
+    text-align: left;
     margin: auto;
     padding-bottom: 40px;
 }
@@ -192,13 +197,78 @@ orange {
     background-color: #f37120;
 }
 
+.bottle {
+    color: rgba(44, 191, 199, 1);
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.bottle:hover {
+    color: white;
+    background-color: rgba(44, 191, 199, 1);
+}
+
+.hira {
+    color: rgba(240, 199, 63, 1);
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.hira:hover {
+    color: white;
+    background-color: rgba(240, 199, 63, 1);
+}
+
+.ford {
+    color: rgba(29, 163, 218, 1);
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.ford:hover {
+    color: white;
+    background-color: rgba(29, 163, 218, 1);
+}
+
+yellow {
+    color: rgba(240, 199, 63, 1);
+    font-weight: 700;
+}
+
+here {
+    color: rgba(0, 175, 170, 1);
+    font-weight: 700;
+}
+
+bottle {
+    color: rgba(44, 191, 199, 1);
+    font-weight: 700;
+}
+
+engage {
+    color: rgba(58, 132, 195, 1);
+    font-weight: 700;
+}
+
+.engage {
+    color: rgba(58, 132, 195, 1);
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.engage:hover {
+    color: white;
+    background-color: rgba(58, 132, 195, 1);
+}
+
 .proj-collection {
     width: 100%;
-    display: block;
-    justify-content: center;
-    vertical-align: center;
+    display: inline-block;
     text-align: center;
-    float: none;
 }
 
 .proj-shadow {
@@ -208,26 +278,66 @@ orange {
 .proj-img20 {
     vertical-align: middle;
     width: 20%;
-    margin: -4% 5% 3.5% 0;
+    margin: -2% 5% 3.5% 0;
+}
+
+.proj-img30 {
+    vertical-align: middle;
+    width: 30%;
+    margin: -2% 2% 3.5% 0;
+}
+
+.proj-img40 {
+    vertical-align: middle;
+    width: 45%;
+    margin: -2.5% 5% 2.5% 0;
+}
+
+.proj-img100 {
+    vertical-align: middle;
+    width: 100%
 }
 
 .proj-photo {
     width: 50%;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    float: none;
+    margin: auto;
+    margin-bottom: 5%;
 }
 
-.triple-column {
+.column-wrapper {
     width: 100%;
     display: block;
 }
 
-.column {
+.third-column {
     width: 30%;
+    margin: 0 .5% 0 .5%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.half-column {
+    width: 40%;
+    margin: 0 .5% 0 .5%;
     display: inline-block;
     vertical-align: top;
 }
 
 .proj-gif {
     margin: -5% 0 5% 0;
+}
+
+.scope {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #414141;
+    padding-left: 1%;
+    border-left: 4px solid #414141;
 }
 
 @media (orientation: portrait) {
@@ -323,14 +433,16 @@ orange {
         opacity: 0;
       }
 
-    .proj-img20 {
+    .proj-img20, .proj-img30, .proj-img40 {
         width: 100%;
         margin: 0 0 10% 0;
     }
 
     .proj-photo {
         width: 80%;
-        margin: -5% 0 5% 0;
+        margin: auto;
+        margin-top: -5%;
+        margin-bottom: 5%;
     }
 
     .column {

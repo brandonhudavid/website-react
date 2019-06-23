@@ -2,6 +2,7 @@ import React from 'react';
 import ford from './img/ford/ford.png';
 import engage from './img/engage/engage.png'
 import here from './img/here/here.png'
+import safely from './img/safely/safely.png'
 import habbit from './img/habbit/habbit.png'
 import hira from './img/hira/hira.png'
 import bottle from './img/bottle/bottle.png'
@@ -15,27 +16,6 @@ import sr from './ScrollReveal'
 
 export class Project extends React.Component {
 
-    // componentDidMount = () => {
-    //     const config = {
-    //       origin: 'bottom',
-    //       duration: 500,
-    //       delay: 200,
-    //       distance: '50px',
-    //       scale: 1,
-    //       easing: 'ease',
-    //     }
-    //     sr.reveal(this.refs.left, config)
-    //     const config2 = {
-    //         origin: 'bottom',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //     }
-    //     sr.reveal(this.refs.right, config2)
-    // }
-
     projImage(id) {
         switch(id) {
             case "ford":
@@ -48,6 +28,8 @@ export class Project extends React.Component {
                 return habbit;
             case "hira":
                 return hira;
+            case "safely":
+                return safely;
             case "bottle":
                 return bottle;
             case "innod":

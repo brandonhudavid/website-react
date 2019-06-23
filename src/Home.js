@@ -14,9 +14,9 @@ export class Home extends React.Component {
     render(){
         return (
             <div>
-                <Bounce right delay={400}><div className="react"><p><i>{"< /> with React. v1.0b"}</i>&nbsp;&nbsp;{"⚛️✨"}</p></div></Bounce>
+                <Bounce left delay={800}><div className="react"><p><i>{"< /> with "}<b>{"React."}</b></i>&nbsp;&nbsp;{"⚛️✨"}</p></div></Bounce>
                 <div id="home-container" style={{marginTop: 8 + '%'}}>
-                    <Bounce right>
+                    <Bounce top>
                         <div style={{width: 100 + '%', display: 'inline-block'}}>
                             <h1 className="titles"><a className="clickable">BRANDON DAVID</a></h1>
                         </div>

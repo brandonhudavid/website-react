@@ -7,6 +7,15 @@ import About from "./About";
 import FolioData from "./FolioData"
 import Project from "./Project"
 import Habbit from "./Habbit"
+import Bottle from "./Bottle"
+import Restoration from "./Restoration"
+import Hira from "./Hira"
+import Here from "./Here"
+import Safely from "./Safely"
+import Innod from "./Innod"
+import Engage from "./Engage"
+import Ford from "./Ford"
+import Akp from "./Akp"
 import logo from './img/logo.png';
 import sr from './ScrollReveal'
 import swe_on from "./img/swe-on.png"
@@ -20,64 +29,6 @@ import graphic_off from "./img/graphic-off.png"
 import Bounce from 'react-reveal/Bounce';
 
 class Portfolio extends React.Component {
-    
-
-    // componentDidMount = () => {
-    //     const config = {
-    //       origin: 'right',
-    //       duration: 500,
-    //       delay: 100,
-    //       distance: '50px',
-    //       scale: 1,
-    //       easing: 'ease',
-    //     }
-    //     sr.reveal(this.refs.i, config)
-    //     const config2 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.ii, config2)
-    //       const config3 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 300,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.iii, config3)
-    //       const config4 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 400,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.iv, config4)
-    //       const config5 = {
-    //         origin: 'left',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.v, config5)
-    //       const config6 = {
-    //         origin: 'left',
-    //         duration: 500,
-    //         delay: 400,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.vi, config6)
-    // }
 
     filterProjects() {
         let proj = [];
@@ -163,36 +114,14 @@ class App extends React.Component {
             home: true,
             about: false,
             folio: false,
+            project: "",
             sweFilter: false,
             iosFilter: false,
             productFilter: false,
             graphicFilter: false,
             filters: []
         }
-    }
-    
-
-    // componentDidMount = () => {
-    //     const config = {
-    //       origin: 'right',
-    //       duration: 500,
-    //       delay: 300,
-    //       distance: '50px',
-    //       scale: 1,
-    //       easing: 'ease',
-    //     }
-    //     sr.reveal(this.refs.pastworks, config)
-    //     const config2 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 100,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.buttons, config2)
-    // }
-    
+    }    
 
     isHome() {
         if (this.state.home) {
@@ -216,29 +145,35 @@ class App extends React.Component {
     }
 
     toHome() {
+        window.scrollTo(0, 0);
         this.setState({
             currentPage: "Home",
             home: true,
             about: false,
-            folio: false
+            folio: false,
+            project: ""
         })
     }
 
     toAbout() {
+        window.scrollTo(0, 0);
         this.setState({
             currentPage: "About",
             home: false,
             about: true,
-            folio: false
+            folio: false,
+            project: ""
         })
     }
 
     toFolio() {
+        window.scrollTo(0, 0);
         this.setState({
             currentPage: "Portfolio",
             home: false,
             about: false,
-            folio: true
+            folio: true,
+            project: ""
         })
     }
 
@@ -265,6 +200,24 @@ class App extends React.Component {
                 switch(this.state.project) {
                     case "habbit":
                         return <Habbit />
+                    case "bottle":
+                        return <Bottle />
+                    case "restoration":
+                        return <Restoration />
+                    case "hira":
+                        return <Hira />
+                    case "here":
+                        return <Here />
+                    case "safely":
+                        return <Safely />
+                    case "innod":
+                        return <Innod />
+                    case "engage":
+                        return <Engage />
+                    case "ford":
+                        return <Ford />
+                    case "akp":
+                        return <Akp />
                     default:
                         return;
                 }
@@ -284,6 +237,18 @@ class App extends React.Component {
                     </Bounce>
                 </div>
             );
+        }
+    }
+
+    backToFolio() {
+        if (this.state.currentPage == "Project" && this.state.project != "") {
+            return (
+                // <Bounce right delay={200}>
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable" onClick={() => this.toFolio()}>Back to my portfolio.</a></div>
+                    </h2>
+                // </Bounce>
+            )
         }
     }
 
@@ -397,7 +362,7 @@ class App extends React.Component {
                 {this.folioButtons()}
                 {this.currentPage()}
                 {this.pastWorks()}
-                {/* {this.toProject()} */}
+                {this.backToFolio()}
             </div>
         );
     }

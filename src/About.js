@@ -78,7 +78,7 @@ export class About extends React.Component {
                     </Bounce>
                     <div id="about-container">
                         <div>
-                        <Bounce right><h1 ref="i" className="titles" style={{marginTop: 'auto'}}>Hi there!</h1></Bounce>
+                        <Bounce top><h1 ref="i" className="titles" style={{marginTop: 'auto'}}>Hi there!</h1></Bounce>
                         <Bounce right delay={100}>
                             <p ref="ii" className="blurbs">
                                 My name is Brandon David. I am a rising third-year studying <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science</a> at UC Berkeley.

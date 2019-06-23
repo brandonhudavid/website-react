@@ -13,13 +13,13 @@ const FolioData = {
             name: "AKP TECHTALKS",
             description: "A tech conference hosted at UC Berkeley.",
             date: "MARCH 2019",
-            tags: ["graphic design, marketing"],
+            tags: ["graphic design, marketing design"],
             filters: ["graphicFilter"]
         },
         {
             id: "engage",
             name: "ENGAGE",
-            description: "Saving class time to learn more.",
+            description: "Facilitating communication between students and teachers in the classroom.",
             date: "SEPTEMBER 2018 - DECEMBER 2018",
             tags: ["backend development", "data visualization", "iOS development", "product design"],
             filters: ["sweFilter", "iosFilter", "productFilter"]
@@ -33,12 +33,20 @@ const FolioData = {
             filters: ["graphicFilter"]
         },
         {
+            id: "safely",
+            name: "SAFELY",
+            description: "Ensuring pedestrian safety by using local crime data to suggest safer routes.",
+            date: "JULY 2018 - AUGUST 2018",
+            tags: ["iOS development", "product design"],
+            filters: ["sweFilter", "iosFilter", "productFilter"]
+        },
+        {
             id: "here",
             name: "HERE TECHNOLOGIES",
-            description: "Research Engineer summer intern.",
+            description: "Research engineer summer intern for HERE's Highly Automated Driving team.",
             date: "JUNE 2018 - AUGUST 2018",
-            tags: ["backend development", "data visualization", "iOS development", "product design", "research"],
-            filters: ["sweFilter", "iosFilter", "productFilter"]
+            tags: ["backend development", "data visualization", "research"],
+            filters: ["sweFilter"]
         },
         {
             id: "habbit",
@@ -59,7 +67,7 @@ const FolioData = {
         {
             id: "bottle",
             name: "BOTTLE",
-            description: "#MyLastTrash Zero Waste Initiative; art piece on display in UC Berkeley's Moffitt Library.",
+            description: "Art piece on display in UC Berkeley's Moffitt Library, part of UC's Zero Waste Initiative.",
             date: "APRIL 2018",
             tags: ["conceptual art", "graphic design"],
             filters: ["graphicFilter"]
@@ -72,22 +80,22 @@ const FolioData = {
             tags: ["photo editing", "teaching"],
             filters: ["graphicFilter"]
         },
-        {
-            id: "bdla",
-            name: "BDLA",
-            description: "Ball Don't Lie Association.",
-            date: "NOVEMBER 2016 - JUNE 2017",
-            tags: ["branding", "graphic design"],
-            filters: ["graphicFilter"]
-        },
-        {
-            id: "whitney",
-            name: "WHITNEY HIGH SCHOOL",
-            description: "Collection of my works from high school.",
-            date: "SEPTEMBER 2013 - JUNE 2017",
-            tags: ["branding", "graphic design", "marketing"],
-            filters: ["graphicFilter"]
-        }
+        // {
+        //     id: "bdla",
+        //     name: "BDLA",
+        //     description: "Ball Don't Lie Association.",
+        //     date: "NOVEMBER 2016 - JUNE 2017",
+        //     tags: ["branding", "graphic design"],
+        //     filters: ["graphicFilter"]
+        // },
+        // {
+        //     id: "whitney",
+        //     name: "WHITNEY HIGH SCHOOL",
+        //     description: "Collection of my works from high school.",
+        //     date: "SEPTEMBER 2013 - JUNE 2017",
+        //     tags: ["branding", "graphic design", "marketing"],
+        //     filters: ["graphicFilter"]
+        // }
     ]
 }
 
