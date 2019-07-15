@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './Home.css';
 import Home from './Home';
 import About from "./About";
-// import Portfolio from "./Portfolio";
+import Portfolio from "./Portfolio";
 import FolioData from "./FolioData"
 import Project from "./Project"
 import Habbit from "./Habbit"
@@ -27,84 +27,113 @@ import ios_off from "./img/ios-off.png"
 import product_off from "./img/product-off.png"
 import graphic_off from "./img/graphic-off.png"
 import Bounce from 'react-reveal/Bounce';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { createBrowserHistory } from 'history';
+// import { withRouter } from "react-router-dom";
 
-class Portfolio extends React.Component {
+// class Portfolio extends React.Component {
 
-    filterProjects() {
-        let proj = [];
-        for (var i=0; i < FolioData.projects.length; i++) {
-            var valid = true;
-            let filters = FolioData.projects[i].filters;
-            for (var j=0; j < this.props.filters.length; j++) {
-                if (!filters.includes(this.props.filters[j])) {
-                    valid = false;
-                    console.log("invalid", "proj filters: ", filters, "props needed: ", this.props.filters);
-                    break;
-                }
-            }
-            if (valid) {
-                console.log("valid: ", FolioData.projects[i].name);
-                proj = proj.concat([FolioData.projects[i]])
-            }
-        }
-        console.log("all valid projs:");
-        for (var i=0; i < proj.length; i++) {
-            console.log(proj.name);
-        }
-        return proj;
-    }
+//     filterProjects() {
+//         let proj = [];
+//         for (var i=0; i < FolioData.projects.length; i++) {
+//             var valid = true;
+//             let filters = FolioData.projects[i].filters;
+//             for (var j=0; j < this.props.filters.length; j++) {
+//                 if (!filters.includes(this.props.filters[j])) {
+//                     valid = false;
+//                     console.log("invalid", "proj filters: ", filters, "props needed: ", this.props.filters);
+//                     break;
+//                 }
+//             }
+//             if (valid) {
+//                 console.log("valid: ", FolioData.projects[i].name);
+//                 proj = proj.concat([FolioData.projects[i]])
+//             }
+//         }
+//         console.log("all valid projs:");
+//         for (var i=0; i < proj.length; i++) {
+//             console.log(proj.name);
+//         }
+//         return proj;
+//     }
 
-    bounceDirection(project, index) {
-        if (index == 0) {
-            return (
-                <Bounce left>
-                    <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-                        <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-                    </div>
-                </Bounce>
-            )
-        }
-        if (index == 1) {
-            return (
-                <Bounce right delay={100}>
-                    <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-                        <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-                    </div>
-                </Bounce>
-            )
-        }
-        if (index % 2 == 0) {
-            return (
-                <Bounce left delay={200}>
-                    <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-                        <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-                    </div>
-                </Bounce>
-            )
-        }
-        return (
-            <Bounce right delay={250}>
-                <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-                    <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-                </div>
-            </Bounce>
-        )
-    }
+//     bounceDirection(project, index) {
+//         if (index == 0) {
+//             return (
+//                 <Bounce left>
+//                     <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+//                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+//                     </div>
+//                 </Bounce>
+//             )
+//         }
+//         if (index == 1) {
+//             return (
+//                 <Bounce right delay={100}>
+//                     <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+//                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+//                     </div>
+//                 </Bounce>
+//             )
+//         }
+//         if (index % 2 == 0) {
+//             return (
+//                 <Bounce left delay={200}>
+//                     <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+//                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+//                     </div>
+//                 </Bounce>
+//             )
+//         }
+//         return (
+//             <Bounce right delay={250}>
+//                 <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
+//                     <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
+//                 </div>
+//             </Bounce>
+//         )
+//     }
 
-    render(){
-        return (
-            <div>
-                <div id="container">
-                    <div>
-                        {this.filterProjects().map((project, index) =>
-                            this.bounceDirection(project, index)
-                        )}
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    // render(){
+    //     return (
+    //         <div>
+    //             <div id="container">
+    //                 <div>
+    //                     {this.filterProjects().map((project, index) =>
+    //                         this.bounceDirection(project, index)
+    //                     )}
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     );
+    // }
+// }
+
+const renderMergedProps = (component, ...rest) => {
+    const finalProps = Object.assign({}, ...rest);
+    return (
+        React.createElement(component, finalProps)
+    );
 }
+
+const PropsRoute = ({component, ...rest}) => {
+    return (
+        <Route {...rest} render={routeProps => {
+            return renderMergedProps(component, routeProps, rest);
+        }}/>
+    );
+}
+
+// class ScrollToTop extends React.Component {
+//     componentDidUpdate(prevProps) {
+//         window.scrollTo(0, 0);
+//     }
+  
+//     render() {
+//       return this.props.children
+//     }
+// }  
+// export default withRouter(ScrollToTop);
 
 class App extends React.Component {
     constructor(props) {
@@ -121,27 +150,8 @@ class App extends React.Component {
             graphicFilter: false,
             filters: []
         }
-    }    
 
-    isHome() {
-        if (this.state.home) {
-            return {opacity: 1};
-        }
-        return {};
-    }
-
-    isAbout(){
-        if (this.state.about) {
-            return "selected";
-        }
-        return "unselected";
-    }
-
-    isFolio(){
-        if (this.state.folio) {
-            return "selected";
-        }
-        return "unselected";
+        let history = new createBrowserHistory();
     }
 
     toHome() {
@@ -226,19 +236,19 @@ class App extends React.Component {
         }
     }
 
-    pastWorks() {
-        if (this.state.currentPage == "Home") {
-            return (
-                <div>
-                    <Bounce right delay={200}>
-                    <h2 ref='pastworks' className="blurbs">
-                        <div className="action-link" onClick={() => this.toFolio()}><a className="pastworks clickable">Check out some of my past works.</a></div>
-                    </h2>
-                    </Bounce>
-                </div>
-            );
-        }
-    }
+    // pastWorks() {
+    //     if (this.state.currentPage == "Home") {
+    //         return (
+    //             <div>
+    //                 <Bounce right delay={200}>
+    //                 <h2 ref='pastworks' className="blurbs">
+    //                     <div className="action-link" onClick={() => this.toFolio()}><a className="pastworks clickable">Check out some of my past works.</a></div>
+    //                 </h2>
+    //                 </Bounce>
+    //             </div>
+    //         );
+    //     }
+    // }
 
     backToFolio() {
         if (this.state.currentPage == "Project" && this.state.project != "") {
@@ -349,21 +359,32 @@ class App extends React.Component {
         })
     }
 
+    scrollToTop() {
+        if ('scrollRestoration' in this.history) {
+            this.history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
-            <div>
-                <header>
-                        <a id="logo" onClick={() => this.toHome()}><img className="clickable" style={this.isHome()} src={logo}/></a>
-                        <nav>
-                            <a className={this.isAbout() + " clickable"} onClick={() => this.toAbout()}>About</a>
-                            <a className={this.isFolio() + " clickable"} onClick={() => this.toFolio()}>Portfolio</a>
-                        </nav>
-                </header>
-                {this.folioButtons()}
-                {this.currentPage()}
-                {this.pastWorks()}
-                {this.backToFolio()}
-            </div>
+            <Router onUpdate={this.scrollToTop} history={this.history}>
+            {/* <ScrollToTop> */}
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <PropsRoute path="/portfolio" component={Portfolio} filters={this.state.filters} />
+                <Route path="/ford" component={Ford} />
+                <Route path="/akp" component={Akp} />
+                <Route path="/engage" component={Engage} />
+                <Route path="/innod" component={Innod} />
+                <Route path="/safely" component={Safely} />
+                <Route path="/here" component={Here} />
+                <Route path="/habbit" component={Habbit} />
+                <Route path="/hira" component={Hira} />
+                <Route path="/bottle" component={Bottle} />
+                <Route path="/restoration" component={Restoration} />
+            {/* </ScrollToTop> */}
+            </Router>
         );
     }
 }

@@ -5,6 +5,8 @@ import deck from './img/safely/BrandonDavid_HERE-Safely.pdf'
 import prev1 from './img/safely/here-preview1.png'
 import prev2 from './img/safely/here-preview2.png'
 import prev3 from './img/safely/here-preview3.png'
+import logo from './img/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Habbit extends React.Component {
 
@@ -12,9 +14,30 @@ export class Habbit extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Safely</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Using HERE's iOS SDK ensure pedestrian safely.<br/>
@@ -58,6 +81,11 @@ export class Habbit extends React.Component {
                         <img className="proj-img40 proj-shadow" src={prev3}/>
                     </div>
                 </Bounce>
+                <Link to="/portfolio">
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

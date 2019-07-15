@@ -16,6 +16,8 @@ import checklist from './img/ford/ford-checklist.png'
 import tracker from './img/ford/ford-tracker.png'
 import flights_map from './img/ford/ford-flights-map.png'
 import photo from './img/ford/ford-photo.jpg'
+import logo from './img/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Habbit extends React.Component {
 
@@ -23,9 +25,30 @@ export class Habbit extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Ford UAV</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Designing an iOS application to help Ford's drones team manage their aircraft flights.<br/>
@@ -205,6 +228,11 @@ export class Habbit extends React.Component {
                         Thank you to Ford and the engineers that maintained communication with us throughout the development of this project. Thanks to Srujay for managing the contract, and to Kayli and Izzie for making the app come to life. Special thanks to Angela for being a competent PM and a slightly-more-than-competent friend.
                     </p>
                 </Bounce>
+                <Link to="/portfolio">
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

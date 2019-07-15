@@ -9,6 +9,8 @@ import process4 from './img/bottle/bottle-process4.png'
 import process5 from './img/bottle/bottle-process5.png'
 import bottle from './img/bottle/bd_bottle.png'
 import pic from './img/bottle/bottle-pic.jpg'
+import logo from './img/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Bottle extends React.Component {
 
@@ -16,9 +18,30 @@ export class Bottle extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Bottle</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Art piece for Moffitt Library's #MyLastTrash Undergraduate Student Art Exhibit.<br/>
@@ -84,6 +107,11 @@ export class Bottle extends React.Component {
                         <img data-sr="enter bottom move 50px wait 0.2s" className="proj-photo proj-shadow" src={pic}/>
                     </div>
                 </Bounce>
+                <Link to="/portfolio">
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

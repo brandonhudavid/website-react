@@ -2,6 +2,8 @@ import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import './Home.css';
 import restoration from './img/restoration/restoration-page.jpg'
+import logo from './img/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Bottle extends React.Component {
 
@@ -9,9 +11,30 @@ export class Bottle extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Photo Restoration</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>A Photo Restoration and Colorization workshop.<br/>
@@ -53,6 +76,11 @@ export class Bottle extends React.Component {
                         </div>
                     </div>
                 </Bounce>
+                <Link to="/portfolio">
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

@@ -21,6 +21,8 @@ import gif1 from './img/habbit/habbit-tutorial.gif'
 import gif2 from './img/habbit/habbit-perform.gif'
 import gif3 from './img/habbit/habbit-tracker.gif'
 import photo from './img/habbit/habbit-photo.JPG'
+import logo from './img/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Habbit extends React.Component {
 
@@ -28,9 +30,30 @@ export class Habbit extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Engage</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Redefining participation.<br/>
@@ -190,6 +213,11 @@ export class Habbit extends React.Component {
                         Thank you to Shubha, Kayli, Michelle, and Jaiveer for coming up with Engage and being awesome teammates. A big thanks to Aayush Tyagi for training us to become the best developers that we can be. And thank you to Mobile Developers of Berkeley for the extensive training program and for providing us the opportunity to develop our own app from scratch.
                     </p>
                 </Bounce>
+                <Link to="/portfolio">
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

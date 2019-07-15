@@ -13,6 +13,8 @@ import gif1 from './img/habbit/habbit-tutorial.gif'
 import gif2 from './img/habbit/habbit-perform.gif'
 import gif3 from './img/habbit/habbit-tracker.gif'
 import photo from './img/habbit/habbit-photo.JPG'
+import logo from './img/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Habbit extends React.Component {
 
@@ -20,9 +22,30 @@ export class Habbit extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Habbit</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>An iOS mobile app that allows users to track their healthy habits efficiently.<br/>
@@ -165,6 +188,11 @@ export class Habbit extends React.Component {
                         Thank you to Chris, Daniel, Nithi, and all the teaching assistants for running the iOS DeCal this semester. Thank you to Professor Dan Garcia for creating the iOS DeCal and giving us lots of advice on presentation day. And thank you to Iris for being an awesome project partner and creating Habbit with me.
                     </p>
                 </Bounce>
+                <Link to="/portfolio">
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

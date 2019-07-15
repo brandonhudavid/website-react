@@ -7,69 +7,26 @@ import github from './img/github-logo.png'
 import resume from './img/BrandonDavid_Resume.pdf'
 import './About.css';
 import sr from './ScrollReveal'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class About extends React.Component {
-
-    // componentDidMount = () => {
-    //     const config = {
-    //       origin: 'right',
-    //       duration: 500,
-    //       delay: 100,
-    //       distance: '50px',
-    //       scale: 1,
-    //       easing: 'ease',
-    //     }
-    //     sr.reveal(this.refs.i, config)
-    //     const config2 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.ii, config2)
-    //       const config3 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 300,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.iii, config3)
-    //       const config4 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 400,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.iv, config4)
-    //       const config5 = {
-    //         origin: 'left',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.v, config5)
-    //       const config6 = {
-    //         origin: 'left',
-    //         duration: 500,
-    //         delay: 400,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.vi, config6)
-    // }
 
     render(){
         return (
             <div>
+                <header>
+                    <Link to="/">
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to="/about">
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to="/portfolio">
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <div style={{display: "inline-block"}}>
                     <Bounce top delay={100}>
                         <div ref="v" className="brandon">
