@@ -27,8 +27,9 @@ import ios_off from "./img/ios-off.png"
 import product_off from "./img/product-off.png"
 import graphic_off from "./img/graphic-off.png"
 import Bounce from 'react-reveal/Bounce';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { createBrowserHistory } from 'history';
+import Error from "./Error"
 // import { withRouter } from "react-router-dom";
 
 // class Portfolio extends React.Component {
@@ -370,6 +371,7 @@ class App extends React.Component {
         return (
             <Router onUpdate={this.scrollToTop} history={this.history}>
             {/* <ScrollToTop> */}
+            <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <PropsRoute path="/portfolio" component={Portfolio} filters={this.state.filters} />
@@ -383,6 +385,8 @@ class App extends React.Component {
                 <Route path="/hira" component={Hira} />
                 <Route path="/bottle" component={Bottle} />
                 <Route path="/restoration" component={Restoration} />
+                <Route component={Error} />
+            </Switch>
             {/* </ScrollToTop> */}
             </Router>
         );

@@ -454,4 +454,14 @@ engage {
         justify-content: center;
         text-align: center;
     }
+
+    .third-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .half-column {
+        width: 100%;
+        text-align: center;
+    }
 }
