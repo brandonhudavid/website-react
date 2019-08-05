@@ -15,14 +15,14 @@ export class About extends React.Component {
         return (
             <div>
                 <header>
-                    <Link to="/">
+                    <Link to={process.env.PUBLIC_URL + "/"}>
                         <a id="logo"><img className="unselected clickable" src={logo}/></a>
                     </Link>
                     <nav>
-                        <Link to="/about">
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
                             <a className={"selected clickable"}>About</a>
                         </Link>
-                        <Link to="/portfolio">
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                             <a className={"unselected clickable"}>Portfolio</a>
                         </Link>
                     </nav>

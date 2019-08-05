@@ -56,7 +56,7 @@ export class Portfolio extends React.Component {
     bounceDirection(project, index) {
         if (index == 0) {
             return (
-                <Link to={"/" + project.id}>
+                <Link to={process.env.PUBLIC_URL + "/" + project.id}>
                     <Bounce up>
                         <div key={project.id} className="clickable">
                             <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
@@ -67,7 +67,7 @@ export class Portfolio extends React.Component {
         }
         if (index == 1) {
             return (
-                <Link to={"/" + project.id}>
+                <Link to={process.env.PUBLIC_URL + "/" + project.id}>
                     <Bounce right delay={100}>
                         <div key={project.id} className="clickable">
                             <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
@@ -78,7 +78,7 @@ export class Portfolio extends React.Component {
         }
         if (index % 2 == 0) {
             return (
-                <Link to={"/" + project.id}>
+                <Link to={process.env.PUBLIC_URL + "/" + project.id}>
                     <Bounce left delay={200}>
                         <div key={project.id} className="clickable">
                             <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
@@ -88,7 +88,7 @@ export class Portfolio extends React.Component {
             )
         }
         return (
-            <Link to={"/" + project.id}>
+            <Link to={process.env.PUBLIC_URL + "/" + project.id}>
                 <Bounce right delay={250}>
                     <div key={project.id} className="clickable">
                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
@@ -167,14 +167,14 @@ export class Portfolio extends React.Component {
         return (
             <div>
                 <header>
-                    <Link to="/">
+                    <Link to={process.env.PUBLIC_URL + "/"}>
                         <a id="logo"><img className="unselected clickable" src={logo}/></a>
                     </Link>
                     <nav>
-                        <Link to="/about">
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
                             <a className={"unselected clickable"}>About</a>
                         </Link>
-                        <Link to="/portfolio">
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                             <a className={"selected clickable"}>Portfolio</a>
                         </Link>
                     </nav>

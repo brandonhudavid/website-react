@@ -152,7 +152,9 @@ class App extends React.Component {
             filters: []
         }
 
-        let history = new createBrowserHistory();
+        let history = new createBrowserHistory({
+            basename: process.env.PUBLIC_URL,
+        });
     }
 
     toHome() {
@@ -369,22 +371,22 @@ class App extends React.Component {
 
     render() {
         return (
-            <Router onUpdate={this.scrollToTop} history={this.history}>
+            <Router onUpdate={this.scrollToTop} history={this.history} basename={process.env.PUBLIC_URL}>
             {/* <ScrollToTop> */}
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <PropsRoute path="/portfolio" component={Portfolio} filters={this.state.filters} />
-                <Route path="/ford" component={Ford} />
-                <Route path="/akp" component={Akp} />
-                <Route path="/engage" component={Engage} />
-                <Route path="/innod" component={Innod} />
-                <Route path="/safely" component={Safely} />
-                <Route path="/here" component={Here} />
-                <Route path="/habbit" component={Habbit} />
-                <Route path="/hira" component={Hira} />
-                <Route path="/bottle" component={Bottle} />
-                <Route path="/restoration" component={Restoration} />
+                <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+                <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
+                <PropsRoute path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} filters={this.state.filters} />
+                <Route path={process.env.PUBLIC_URL + "/ford"} component={Ford} />
+                <Route path={process.env.PUBLIC_URL + "/akp"} component={Akp} />
+                <Route path={process.env.PUBLIC_URL + "/engage"} component={Engage} />
+                <Route path={process.env.PUBLIC_URL + "/innod"} component={Innod} />
+                <Route path={process.env.PUBLIC_URL + "/safely"} component={Safely} />
+                <Route path={process.env.PUBLIC_URL + "/here"} component={Here} />
+                <Route path={process.env.PUBLIC_URL + "/habbit"} component={Habbit} />
+                <Route path={process.env.PUBLIC_URL + "/hira"} component={Hira} />
+                <Route path={process.env.PUBLIC_URL + "/bottle"} component={Bottle} />
+                <Route path={process.env.PUBLIC_URL + "/restoration"} component={Restoration} />
                 <Route component={Error} />
             </Switch>
             {/* </ScrollToTop> */}

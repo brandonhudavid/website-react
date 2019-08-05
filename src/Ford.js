@@ -37,15 +37,15 @@ export class Habbit extends React.Component {
         return (
             <div>
                 <header>
-                    <Link to="/">
+                    <Link to={process.env.PUBLIC_URL + "/"}>
                         <a id="logo"><img className="unselected clickable" src={logo}/></a>
                     </Link>
                     <nav>
-                        <Link to="/about">
-                            <a className={"selected clickable"}>About</a>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"unselected clickable"}>About</a>
                         </Link>
-                        <Link to="/portfolio">
-                            <a className={"unselected clickable"}>Portfolio</a>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"selected clickable"}>Portfolio</a>
                         </Link>
                     </nav>
                 </header>
@@ -228,7 +228,7 @@ export class Habbit extends React.Component {
                         Thank you to Ford and the engineers that maintained communication with us throughout the development of this project. Thanks to Srujay for managing the contract, and to Kayli and Izzie for making the app come to life. Special thanks to Angela for being a competent PM and a slightly-more-than-competent friend.
                     </p>
                 </Bounce>
-                <Link to="/portfolio">
+                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                     <h2 ref='pastworks' className="blurbs">
                         <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
                     </h2>

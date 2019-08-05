@@ -16,14 +16,14 @@ export class Home extends React.Component {
         return (
             <div>
                 <header>
-                    <Link to="/">
+                    <Link to={process.env.PUBLIC_URL + "/"}>
                         <a id="logo"><img className="clickable" style={{opacity: 1}} src={logo}/></a>
                     </Link>
                     <nav>
-                        <Link to="/about">
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
                             <a className={"unselected clickable"}>About</a>
                         </Link>
-                        <Link to="/portfolio">
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                             <a className={"unselected clickable"}>Portfolio</a>
                         </Link>
                     </nav>
@@ -47,7 +47,7 @@ export class Home extends React.Component {
                 </div>
                 <div>
                     <Bounce right delay={200}>
-                    <Link to="/portfolio">
+                    <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                         <h2 ref='pastworks' className="blurbs">
                             <div className="action-link"><a className="pastworks clickable">Check out some of my past works.</a></div>
                         </h2>
