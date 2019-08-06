@@ -3,28 +3,39 @@ import Bounce from 'react-reveal/Bounce';
 import './Home.css';
 import home from './img/hira/hira-home.jpg'
 import transcript from './img/hira/hira-transcript.jpg'
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
-import tracker2 from './img/habbit/habbit-tracker2.jpg'
-import tracker3 from './img/habbit/habbit-tracker3.jpg'
-import logo1 from './img/habbit/habbit-logo1.png'
-import colors from './img/habbit/habbit-colors.png'
-import logo2 from './img/habbit/habbit-logo2.png'
-import wireframe from './img/habbit/habbit-wireframe.png'
-import backend from './img/habbit/habbit-backend.png'
-import gif1 from './img/habbit/habbit-tutorial.gif'
-import gif2 from './img/habbit/habbit-perform.gif'
-import gif3 from './img/habbit/habbit-tracker.gif'
-import photo from './img/habbit/habbit-photo.JPG'
+import logo from './img/logo.png';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Hira extends React.Component {
 
     constructor(props) {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to={process.env.PUBLIC_URL + "/"}>
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"unselected clickable"}>About</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"selected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Hira</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>A notebook that converts audible lectures into editable text notes.<br/>
@@ -44,9 +55,11 @@ export class Habbit extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         LA Hacks is an annual Hackathon hosted at UCLA. <a href="https://devpost.com/brianshanehe" className="hira" target="_blank">Brian He,</a> <a href="https://www.steph.ng" className="hira" target="_blank">Steph Ng,</a> <a href="http://ne-oh.webflow.io" className="hira" target="_blank">Annie Oh,</a> and I formed a team and worked on Hira from March 30th to April 1st.
                     </p>
+                    </div>
                 </Bounce>
                 
                 <Bounce left delay={200}>
@@ -81,8 +94,8 @@ export class Habbit extends React.Component {
                         Hira is for all note-takers, young or old. Hira's live transcripts keep professionals engaged and present at meetings. Hira's highlighting and annotation features also help students remember key points.
                     </p>
                     <div className="proj-collection">
-                        <img data-sr="enter bottom move 50px wait 0.2s" className="proj-img40 proj-shadow" src={home}/>
-                        <img data-sr="enter bottom move 50px wait 0.25s" className="proj-img40 proj-shadow" src={transcript}/>
+                        <img  className="proj-img40 proj-shadow" src={home}/>
+                        <img className="proj-img40 proj-shadow" src={transcript}/>
                     </div>
                     <div className="proj-collection" style={{marginBottom: 4 + '%'}}>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/lHv5MdZoAEI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -92,6 +105,7 @@ export class Habbit extends React.Component {
                     <subtitle className="background">
                         Reflections
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         LA Hacks 2018 was a new experience for most of us since this was our very first Hackathon. Although not sure what to expect in the beginning, it was inspiring to see so many other groups participating and creating new hacks.<br/>
                         <br/>
@@ -99,18 +113,26 @@ export class Habbit extends React.Component {
                         <br/>
                         For our first Hackathon, we were very proud of the end result and the obstacles that we overcame. We also gained intuition of what to expect from a Hackathon and how teams must cooperate when it comes down to the wire.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle className="background">
                         Acknowledgments
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Thank you to UCLA for hosting LA Hacks 2018, giving us free food, and providing us opportunities to connect with lots of companies. And thank you to Brian, Steph, and Annie for being determined hackers and for making my first Hackathon experience memorable.
                     </p>
+                    </div>
                 </Bounce>
+                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }
 }
 
-export default Habbit;
+export default Hira;

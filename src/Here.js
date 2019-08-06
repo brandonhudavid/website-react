@@ -3,30 +3,39 @@ import Bounce from 'react-reveal/Bounce';
 import './Home.css';
 import deck1 from './img/here/here-deck1.png'
 import deck2 from './img/here/here-deck2.png'
+import logo from './img/logo.png';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
-import tracker2 from './img/habbit/habbit-tracker2.jpg'
-import tracker3 from './img/habbit/habbit-tracker3.jpg'
-import logo1 from './img/habbit/habbit-logo1.png'
-import colors from './img/habbit/habbit-colors.png'
-import logo2 from './img/habbit/habbit-logo2.png'
-import wireframe from './img/habbit/habbit-wireframe.png'
-import backend from './img/habbit/habbit-backend.png'
-import gif1 from './img/habbit/habbit-tutorial.gif'
-import gif2 from './img/habbit/habbit-perform.gif'
-import gif3 from './img/habbit/habbit-tracker.gif'
-import photo from './img/habbit/habbit-photo.JPG'
-
-export class Habbit extends React.Component {
+export class Here extends React.Component {
 
     constructor(props) {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to={process.env.PUBLIC_URL + "/"}>
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"unselected clickable"}>About</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"selected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>HERE Technologies</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Research engineer intern for HERE's Highly Automated Driving Team.<br/>
@@ -45,9 +54,11 @@ export class Habbit extends React.Component {
                             Background
                         </div>
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         <a className="here" href="http://here.com" target="_blank">HERE Technologies</a> is a Netherlands-based company that provides mapping and location data in order to help other companies and individuals harness the power of location. Since 2018, they are <a className="here" href="https://360.here.com/among-google-apple-mapbox-and-others-here-is-now-1-in-location-platforms" target="_blank">ranked #1</a> in location platform providers, above major competitors like Google, Apple, and MapBox. In the summer of 2018, I was a research engineer intern for HERE's Highly Automated Driving Team, with a focus on modeling road features visualized by autonomous cars.
                     </p>
+                    </div>
                 </Bounce>
 
                 <Bounce right delay={200}>
@@ -75,9 +86,14 @@ export class Habbit extends React.Component {
                         <img className="proj-img40 proj-shadow" src={deck2}/>
                     </div>
                 </Bounce>
+                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }
 }
 
-export default Habbit;
+export default Here;

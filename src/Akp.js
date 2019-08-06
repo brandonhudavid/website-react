@@ -7,6 +7,8 @@ import flyer2 from './img/akp/akp-flyer2.png'
 import flyer3 from './img/akp/akp-flyer3.png'
 import final from './img/akp/akp-flyer-final.jpg'
 import cover from './img/akp/akp-cover.jpg'
+import logo from './img/logo.png';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class Akp extends React.Component {
 
@@ -14,9 +16,30 @@ export class Akp extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to={process.env.PUBLIC_URL + "/"}>
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"unselected clickable"}>About</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"selected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Alpha Kappa Psi TechTalks</h1></Bounce>
                 <Bounce left delay={50}><p>A professional event connecting industry leaders with UC Berkeley students.</p></Bounce>
                 <Bounce left delay={100}>
@@ -30,9 +53,11 @@ export class Akp extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Alpha Kappa Psi is a professional business fraternity, and UC Berkeley's chapter hosts annual professional events on campus. In the spring of 2019, I worked on creating marketing materials for the event.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
@@ -65,6 +90,11 @@ export class Akp extends React.Component {
                         <img className="proj-img40 proj-shadow" src={cover}/>
                     </div>
                 </Bounce>
+                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

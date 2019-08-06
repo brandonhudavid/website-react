@@ -1,7 +1,6 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import './Home.css';
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
 import process1 from './img/bottle/bottle-process1.png'
 import process2 from './img/bottle/bottle-process2.png'
 import process3 from './img/bottle/bottle-process3.png'
@@ -9,6 +8,8 @@ import process4 from './img/bottle/bottle-process4.png'
 import process5 from './img/bottle/bottle-process5.png'
 import bottle from './img/bottle/bd_bottle.png'
 import pic from './img/bottle/bottle-pic.jpg'
+import logo from './img/logo.png';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class Bottle extends React.Component {
 
@@ -16,9 +17,30 @@ export class Bottle extends React.Component {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to={process.env.PUBLIC_URL + "/"}>
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"unselected clickable"}>About</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"selected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Bottle</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Art piece for Moffitt Library's #MyLastTrash Undergraduate Student Art Exhibit.<br/>
@@ -35,9 +57,11 @@ export class Bottle extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Zero Waste is a University of California initiative to reduce waste across campuses and achieve zero waste by 2020. Since the fall of 2018, UC Berkeley's Moffitt Library has hosted an art exhibit themed <bottle>#MyLastTrash</bottle> in support of the initiative.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
@@ -56,9 +80,9 @@ export class Bottle extends React.Component {
                     </p>
                     <div className="proj-collection">
                         <div style={{display: "inline-block"}}>
-                        <img data-sr="enter bottom move 50px wait 0.2s" class="proj-img20 proj-shadow" src={process1}/>
-                        <img data-sr="enter bottom move 50px wait 0.25s" class="proj-img20 proj-shadow" src={process2}/>
-                        <img data-sr="enter bottom move 50px wait 0.3s" class="proj-img20 proj-shadow" src={process3}/>
+                        <img class="proj-img20 proj-shadow" src={process1}/>
+                        <img class="proj-img20 proj-shadow" src={process2}/>
+                        <img class="proj-img20 proj-shadow" src={process3}/>
                         </div>
                     </div>
                 </Bounce>
@@ -67,8 +91,8 @@ export class Bottle extends React.Component {
                     To juxtapose the reusable and plastic bottles' effects on the environment, I grouped several plastic bottles together on one side and the single reusable on the other. I then added highlights and shadows for more dimensionality, removed the plastic bottle outlines to make the overall design cleaner, and made the background blue-green to coincide with the zero waste theme.
                     </p>
                     <div className="proj-collection">
-                        <img data-sr="enter bottom move 50px wait 0.2s" className="proj-img40 proj-shadow" src={process4}/>
-                        <img data-sr="enter bottom move 50px wait 0.25s" className="proj-img40 proj-shadow" src={process5}/>
+                        <img className="proj-img40 proj-shadow" src={process4}/>
+                        <img className="proj-img40 proj-shadow" src={process5}/>
                     </div>
                 </Bounce>
                 <Bounce left delay={200}>
@@ -77,13 +101,18 @@ export class Bottle extends React.Component {
                     </p>
                     <div className="proj-collection">
                         <div style={{display: "inline-block"}}>
-                            <img data-sr="enter bottom move 50px wait 0.2s" className="proj-photo proj-shadow" src={bottle}/>
+                            <img className="proj-photo proj-shadow" src={bottle}/>
                         </div>
                     </div>
                     <div className="proj-collection">
-                        <img data-sr="enter bottom move 50px wait 0.2s" className="proj-photo proj-shadow" src={pic}/>
+                        <img className="proj-photo proj-shadow" src={pic}/>
                     </div>
                 </Bounce>
+                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }

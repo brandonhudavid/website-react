@@ -9,28 +9,39 @@ import design1 from './img/engage/engage-design1.jpg'
 import design2 from './img/engage/engage-design2.png'
 import design3 from './img/engage/engage-design3.png'
 import dev1 from './img/engage/engage-dev1.jpg'
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
-import tracker2 from './img/habbit/habbit-tracker2.jpg'
-import tracker3 from './img/habbit/habbit-tracker3.jpg'
-import logo1 from './img/habbit/habbit-logo1.png'
-import colors from './img/habbit/habbit-colors.png'
-import logo2 from './img/habbit/habbit-logo2.png'
-import wireframe from './img/habbit/habbit-wireframe.png'
-import backend from './img/habbit/habbit-backend.png'
-import gif1 from './img/habbit/habbit-tutorial.gif'
-import gif2 from './img/habbit/habbit-perform.gif'
-import gif3 from './img/habbit/habbit-tracker.gif'
-import photo from './img/habbit/habbit-photo.JPG'
+import logo from './img/logo.png';
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Engage extends React.Component {
 
     constructor(props) {
         super(props); 
     }
 
+    componentWillMount() {
+        window.scrollTo(0,0);
+    }
+
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div>
+                <header>
+                    <Link to={process.env.PUBLIC_URL + "/"}>
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"unselected clickable"}>About</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"selected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <Bounce top><h1>Engage</h1></Bounce>
                 <Bounce left delay={50}>
                     <p>Redefining participation.<br/>
@@ -49,9 +60,11 @@ export class Habbit extends React.Component {
                         Background
                         </div>
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         For the second half of their first semester in <a href="https://mdb.dev/" className="mdb" target="_blank">Mobile Developers of Berkeley,</a> new members form small teams and work on designing, developing, and deploying a mobile app for the rest of the semester. I worked on developing Engage for iOS with <a href="https://www.linkedin.com/in/shubhaja/" className="engage" target="_blank">Shubha Jagannatha</a> and <a href="https://angel.co/kayli-jiang" className="engage" target="_blank">Kayli Jiang</a> while <a href="https://www.linkedin.com/in/michelle-mao/" className="engage" target="_blank">Michelle Mao</a> and <a href="https://www.linkedin.com/in/jaiveer-singh/" className="engage" target="_blank">Jaiveer Singh</a> worked on Engage for Android.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
@@ -186,13 +199,20 @@ export class Habbit extends React.Component {
                     <subtitle className="background">
                         Acknowledgments
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Thank you to Shubha, Kayli, Michelle, and Jaiveer for coming up with Engage and being awesome teammates. A big thanks to Aayush Tyagi for training us to become the best developers that we can be. And thank you to Mobile Developers of Berkeley for the extensive training program and for providing us the opportunity to develop our own app from scratch.
                     </p>
+                    </div>
                 </Bounce>
+                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                    <h2 ref='pastworks' className="blurbs">
+                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                    </h2>
+                </Link>
             </div>
         );
     }
 }
 
-export default Habbit;
+export default Engage;

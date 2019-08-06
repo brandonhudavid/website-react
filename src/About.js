@@ -6,74 +6,30 @@ import linkedin from './img/linkedin-logo.png'
 import github from './img/github-logo.png'
 import resume from './img/BrandonDavid_Resume.pdf'
 import './About.css';
-import sr from './ScrollReveal'
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class About extends React.Component {
-
-    // componentDidMount = () => {
-    //     const config = {
-    //       origin: 'right',
-    //       duration: 500,
-    //       delay: 100,
-    //       distance: '50px',
-    //       scale: 1,
-    //       easing: 'ease',
-    //     }
-    //     sr.reveal(this.refs.i, config)
-    //     const config2 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.ii, config2)
-    //       const config3 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 300,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.iii, config3)
-    //       const config4 = {
-    //         origin: 'right',
-    //         duration: 500,
-    //         delay: 400,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.iv, config4)
-    //       const config5 = {
-    //         origin: 'left',
-    //         duration: 500,
-    //         delay: 200,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.v, config5)
-    //       const config6 = {
-    //         origin: 'left',
-    //         duration: 500,
-    //         delay: 400,
-    //         distance: '50px',
-    //         scale: 1,
-    //         easing: 'ease',
-    //       }
-    //       sr.reveal(this.refs.vi, config6)
-    // }
 
     render(){
         return (
             <div>
+                <header>
+                    <Link to={process.env.PUBLIC_URL + "/"}>
+                        <a id="logo"><img className="unselected clickable" src={logo}/></a>
+                    </Link>
+                    <nav>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>
+                            <a className={"selected clickable"}>About</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                    </nav>
+                </header>
                 <div style={{display: "inline-block"}}>
                     <Bounce top delay={100}>
                         <div ref="v" className="brandon">
-                            <img src={brandon} />
+                            <img src={brandon} alt="Brandon David" />
                         </div>
                     </Bounce>
                     <div id="about-container">
@@ -102,14 +58,14 @@ export class About extends React.Component {
                         <a href="https://github.com/brandonhudavid" target="_blank"><img ref="vi" src={github} /></a>
                     </div>
                 </Bounce>
+                <Bounce right delay={300}>
                     <a href={resume} target="_blank">
-                    <Bounce right delay={300}>
-                        <h2 ref="iv" className="blurbs action-link clickable">Click here for my resume.</h2>
-                    </Bounce>
+                        <h2 ref="iv" className="resume action-link clickable">Click here for my resume.</h2>
                     </a>
+                </Bounce>
             </div>
             <Bounce left delay={400}>
-                <div ref="vi" style={{float: 'left'}}>
+                <div className="contact">
                     <p>
                         Interested in working together?<br/>
                         Feel free to email me at <a className="orange">brandonhudavid@berkeley.edu</a> :)
