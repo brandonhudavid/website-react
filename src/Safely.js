@@ -59,16 +59,18 @@ export class Safely extends React.Component {
                         Background
                         </div>
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         During my summer internship at the HERE Berkeley office, I had the opportunity to work with <a href="https://vanasaliu.myportfolio.com/" className="here" target="_blank">Vanasa Liu</a>—a product design intern—and the Berkeley Design Office on a location based side project that utilizes HERE's location technology.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
                         Near the HERE Berkeley Office
                     </subtitle>
                     <p className="writeup">
-                        Vanasa and I discovered a problem that has an effect on people right outside our office and all around the world: <here>getting to your destination safely.</here> In the summer of 2018, the city of Berkeley's Crime Index Ranking was #4, meaning that Berkeley was only safer than 4% of all U.S. cities. These safety concerns extend to cities around the world, affecting everyone from college students to full-time employees.
+                        Vanasa and I discovered a problem that has an effect on people right outside our office and all around the world: <here>getting to your destination safely.</here> In the summer of 2018, the city of Berkeley's Crime Index Ranking was #4, meaning that Berkeley was safer than only 4% of all U.S. cities. These safety concerns extend to cities around the world, affecting everyone from college students to full-time employees.
                     </p>
                     <p className="writeup">
                         Thus, Vanasa and I worked on a solution to address this issue. We took our concept from ideation through product design and multiple iterations. And with HERE's extensive location database and readily available APIs, we took this concept all the way to a functional prototype that routes users to their destinations safely. Read more about our process by checking out our <a className="here" href={deck} target="_blank">presentation deck</a> or viewing my <a className="here" href="https://developer.here.com/blog/safely-route-college-students-using-the-here-ios-sdk" target="_blank">published article!</a>

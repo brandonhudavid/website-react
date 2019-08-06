@@ -2,6 +2,12 @@ import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import './Home.css';
 import logo from './img/logo.png';
+import chantal from './img/innod/chantal-herrera.jpg';
+import william from './img/innod/william-jiang.jpg';
+import tiffany from './img/innod/tiffany-tran.jpg';
+import tiffany2 from './img/innod/tiffany-tran2.jpg';
+import eva from './img/innod/eva-chi.png';
+import bell from './img/innod/bell-wu.jpg';
 import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class Innod extends React.Component {
@@ -51,9 +57,11 @@ export class Innod extends React.Component {
                         Background
                         </div>
                     </subtitle>
-                    <p className="background bg-writeup">
-                        Every semester, Innovative Design—the premier creative agency at UC Berkeley—hosts the Introduction to Photoshop and Illustrator class, one of the most popular student-led classes at UC Berkeley that receives hundreds of applicants per semester. The class teaches beginners how to use Photoshop and Illustrator as well as apply basic design principles.
-                    </p>
+                    <div className="right-wrapper">
+                        <p className="background bg-writeup">
+                            Every semester, Innovative Design—the premier creative agency at UC Berkeley—hosts the Introduction to Photoshop and Illustrator class, one of the most popular student-led classes at UC Berkeley that receives hundreds of applicants per semester. The class teaches beginners how to use Photoshop and Illustrator as well as apply basic design principles.
+                        </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
@@ -62,8 +70,44 @@ export class Innod extends React.Component {
                         </div>
                     </subtitle>
                     <p className="writeup">
-                        In the fall of 2018, I led a weekly 2-hour section of 30 students with little to no prior experience in digital design. The curriculum focuses on learning Illustrator for more than half of the semester, and then transitions into exploring Photoshop techniques. Students are given weekly homework assignments that allow them to apply the skills they learned in section. They also have midterm and final assignments, allowing them to display the culmination of what they learned about Illustrator and Photoshop throughout the semester.
+                        In the fall of 2018, I led a weekly 2-hour section of 30 students with little to no prior experience in digital design. The curriculum focuses on learning Illustrator for more than half of the semester, and then transitions into exploring Photoshop techniques.
                     </p>
+                    <p className="writeup">
+                        Students are given weekly homework assignments that allow them to apply the skills they learned in section. They also have midterm and final assignments, allowing them to display what they learned about Illustrator and Photoshop throughout the semester.
+                    </p>
+                </Bounce>
+                <Bounce left delay={200}>
+                    <div className="proj-collection">
+                        <img className="proj-img40 proj-shadow" src={chantal}/>
+                        <img className="proj-img40 proj-shadow" src={william}/>
+                    </div>
+                </Bounce>
+                <Bounce left delay={200}>
+                    <div className="proj-collection">
+                        <img className="proj-img40 proj-shadow" src={tiffany}/>
+                        <img className="proj-img40 proj-shadow" src={tiffany2}/>
+                    </div>
+                </Bounce>
+                <Bounce left delay={200}>
+                    <div className="proj-collection">
+                        <img className="proj-img40 proj-shadow" src={eva}/>
+                        <img className="proj-img40 proj-shadow" src={bell}/>
+                    </div>
+                </Bounce>
+                <Bounce left delay={200}>
+                    <p className="writeup">
+                        Artwork credit to Chantal Herrera, William Jiang, Tiffany Tran, Eva Chi, and Bell Wu.
+                    </p>
+                </Bounce>
+                <Bounce left delay={200}>
+                    <subtitle className="background">
+                        Acknowledgments
+                    </subtitle>
+                    <div className="right-wrapper">
+                        <p className="background bg-writeup">
+                            Thank you to Sahil Sanghvi, Valerie Tan, and Julie Wong for being amazing instructors for the other sections. And big thank you to Kiana Aryan for managing all of these classes and training us to become awesome instructors.
+                        </p>
+                    </div>
                 </Bounce>
                 <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                     <h2 ref='pastworks' className="blurbs">

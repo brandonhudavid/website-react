@@ -54,9 +54,11 @@ export class Here extends React.Component {
                             Background
                         </div>
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         <a className="here" href="http://here.com" target="_blank">HERE Technologies</a> is a Netherlands-based company that provides mapping and location data in order to help other companies and individuals harness the power of location. Since 2018, they are <a className="here" href="https://360.here.com/among-google-apple-mapbox-and-others-here-is-now-1-in-location-platforms" target="_blank">ranked #1</a> in location platform providers, above major competitors like Google, Apple, and MapBox. In the summer of 2018, I was a research engineer intern for HERE's Highly Automated Driving Team, with a focus on modeling road features visualized by autonomous cars.
                     </p>
+                    </div>
                 </Bounce>
 
                 <Bounce right delay={200}>

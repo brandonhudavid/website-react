@@ -51,9 +51,11 @@ export class Restoration extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                     <a href="https://hex.innovativedesign.club/" className="innod" target="_blank">HEX: Hone and Explore</a> is a bi-annual event hosted by <a href="https://innovativedesign.club/" className="innod" target="_blank">Innovative Design,</a> UC Berkeley's premier creative agency. During HEX, Innovative Design's members prepare free workshops for students interested in learning more about art, design, and other mediums of creativity.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>

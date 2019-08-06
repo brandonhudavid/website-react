@@ -69,9 +69,11 @@ export class Ford extends React.Component {
                         Background
                         </div>
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Every semester, Mobile Developers of Berkeley dedicates several teams to work on contracted projects for other organizations or businesses. In the spring of 2019, I worked as the lead product designer on a contract with Ford's unmanned aerial vehicle (UAV) team. Also working on the contract was program manager <a target="_blank" href="http://www.isthisangela.com/" className="ford">Angela Dong,</a> contracting officer <a target="_blank" href="http://srujayk.com/" className="ford">Srujay Korlakunta,</a> and iOS developers <a target="_blank" href="https://angel.co/kayli-jiang" className="ford">Kayli Jiang</a> and <a target="_blank" href="https://www.linkedin.com/in/xisabellalau/" className="ford">Izzie Lau.</a>
                     </p>
+                    </div>
                 </Bounce>
                 
                 <Bounce left delay={200}>
@@ -213,9 +215,11 @@ export class Ford extends React.Component {
                     <subtitle className="background">
                         Reflections
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Working on this mobile app for Ford was a rewarding experience. I enjoyed communicating with the Ford engineers about the design changes we made each week while they provided insightful feedback and suggestions for what the next iterations could include. This was my first time working on product design for a larger organization, and it feels fulfilling that the designs were well-received. The developers are continuing to develop the Ford app and are projected to finish by the end of summer 2019.
                     </p>
+                    </div>
                     <div className="proj-collection">
                         <img className="proj-photo proj-shadow" src={photo}/>
                     </div>
@@ -224,9 +228,11 @@ export class Ford extends React.Component {
                     <subtitle className="background">
                         Acknowledgments
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
-                        Thank you to Ford and the engineers that maintained communication with us throughout the development of this project. Thanks to Srujay for managing the contract, and to Kayli and Izzie for making the app come to life. Special thanks to Angela for being a competent PM and a slightly-more-than-competent friend.
+                        Thank you to Ford and the engineers that maintained communication with us throughout the development of this project. Thanks to Srujay for managing the contract, and to Kayli and Izzie for making the app come to life. Special thanks to Angela being an awesome PM.
                     </p>
+                    </div>
                 </Bounce>
                 <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                     <h2 ref='pastworks' className="blurbs">

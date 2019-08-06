@@ -55,9 +55,11 @@ export class Hira extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         LA Hacks is an annual Hackathon hosted at UCLA. <a href="https://devpost.com/brianshanehe" className="hira" target="_blank">Brian He,</a> <a href="https://www.steph.ng" className="hira" target="_blank">Steph Ng,</a> <a href="http://ne-oh.webflow.io" className="hira" target="_blank">Annie Oh,</a> and I formed a team and worked on Hira from March 30th to April 1st.
                     </p>
+                    </div>
                 </Bounce>
                 
                 <Bounce left delay={200}>
@@ -103,6 +105,7 @@ export class Hira extends React.Component {
                     <subtitle className="background">
                         Reflections
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         LA Hacks 2018 was a new experience for most of us since this was our very first Hackathon. Although not sure what to expect in the beginning, it was inspiring to see so many other groups participating and creating new hacks.<br/>
                         <br/>
@@ -110,14 +113,17 @@ export class Hira extends React.Component {
                         <br/>
                         For our first Hackathon, we were very proud of the end result and the obstacles that we overcame. We also gained intuition of what to expect from a Hackathon and how teams must cooperate when it comes down to the wire.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle className="background">
                         Acknowledgments
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Thank you to UCLA for hosting LA Hacks 2018, giving us free food, and providing us opportunities to connect with lots of companies. And thank you to Brian, Steph, and Annie for being determined hackers and for making my first Hackathon experience memorable.
                     </p>
+                    </div>
                 </Bounce>
                 <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                     <h2 ref='pastworks' className="blurbs">

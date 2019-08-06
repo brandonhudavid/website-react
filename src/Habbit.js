@@ -77,51 +77,41 @@ export class Habbit extends React.Component {
                     <subtitle>
                         Routine is difficult.
                     </subtitle>
-                    <div className="left-wrapper">
                         <p className="writeup">
                             Often times, people set goals for themselves—casual or ambitious—that can be attained through habitual efforts. However, being motivated to follow a consistent routine can be difficult. Also, once the routine is broken, it can be hard to get back in rhythm.
                         </p>
-                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
                         Inspiration from bullet journaling.
                     </subtitle>
-                    <div className="left-wrapper">
                         <p className="writeup">
                             The idea behind Habbit was heavily influenced by a popular bullet journaling element, a tracker, used to help keep track of daily habits and tasks.
                         </p>
-                    </div>
                     <div className="proj-collection">
                         <img  className="proj-img20 proj-shadow" src={tracker1}/>
                         <img className="proj-img20 proj-shadow" src={tracker2}/>
                         <img className="proj-img20 proj-shadow" src={tracker3}/>
                     </div>
-                    <div className="left-wrapper">
                         <p className="writeup">
                             Carrying around a bullet journal can be troublesome and could result in damaging the journal over time. On the other hand, having a mobile app as a tracker is much more convenient. People bring their phones everywhere, and the tracker would be beneficial to those without bullet journals.
                         </p>
-                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
                         <orange>Habbit,</orange> the mobile habit tracker.
                     </subtitle>
-                    <div className="left-wrapper">
                         <p className="writeup">
                             <orange><b>Habbit</b></orange> is an iOS app that helps you keep up with healthy daily <orange><b><i>habbits.</i></b></orange> Keeping track of your habbits is as simple as tapping an icon. Look at habbits you've completed in the past with the <orange><b>tracker</b></orange> feature. Set and fulfill your goals efficiently with Habbit.
                         </p>
-                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
                         Logo design and color scheme.
                     </subtitle>
-                    <div className="left-wrapper">
                         <p className="writeup">
                             We noted that the words "habit" and "rabbit" looked and sounded familiar, so we created a bunny rabbit logo for our app. We originally named the app "Rabit", but eventually changed it to "Habbit". We then decided on a color scheme with green (resembling carrot leaves), white (for the rabbit), and orange (for the carrot itself). We would later decide to only use the white and orange colors for the app.
                         </p>
-                    </div>
                     <div className="proj-collection">
                         <img  className="proj-img20 proj-shadow" src={logo1}/>
                         <img className="proj-img20 proj-shadow" src={colors}/>
@@ -132,13 +122,11 @@ export class Habbit extends React.Component {
                     <subtitle>
                         Low fidelity designs and wireframes.
                     </subtitle>
-                    <div className="left-wrapper">
                         <p className="writeup">
                             For the app's workflow, we wanted the initial page to display all of the user's current habbits, making it easy for users to view and select habbits they have performed. From there, users could either add and delete habbits, or view another tracker page that displays a grid of habbits performed in the past.<br/>
                             <br/>
                             We decided to use <a target="_blank" className="orange" href="https://firebase.google.com"><b>Firebase</b></a> as our backend. The backend database would comprise of each user having a user ID, and each user ID having multiple children representing the habbits that the user has created. Every habbit would have information regarding when it was performed in the past and if it was performed today. <br/> 
                         </p>
-                    </div>
                     <div className="proj-collection">
                         <img  className="proj-img20 proj-shadow" src={wireframe}/>
                         <img className="proj-img20 proj-shadow" src={backend}/>
@@ -150,11 +138,9 @@ export class Habbit extends React.Component {
                             <subtitle>
                                 Tutorial for new users.
                             </subtitle>
-                            <div className="left-wrapper">
                                 <p style={{marginBottom: 8 + '%'}} className="writeup">
                                     If Habbit recognizes that a new user has been created, the app will give a short tutorial sequence showing the user where essential functionalities are located. Tutorial created using <a href="https://github.com/yukiasai/Gecco" className="orange" target="_blank"><b>Gecco API.</b></a>
                                 </p>
-                            </div>
                             <img className="proj-gif proj-shadow" src={gif1}/>
                         </div>
                     </Bounce>
@@ -163,11 +149,9 @@ export class Habbit extends React.Component {
                             <subtitle>
                                 Creating, performing, and deleting habbits.
                             </subtitle>
-                            <div className="left-wrapper">
                                 <p style={{marginBottom: 8 + '%'}} className="writeup">
                                     Users create a habbit by typing in a name and select an appropriate icon. A check mark represents performing that habbit today. Data is stored in the Firebase database.
                                 </p>
-                            </div>
                             <img className="proj-gif proj-shadow" src={gif2}/>
                         </div>
                     </Bounce>
@@ -176,11 +160,9 @@ export class Habbit extends React.Component {
                             <subtitle>
                                 Using the tracker.
                             </subtitle>
-                            <div className="left-wrapper">
                                 <p style={{marginBottom: 8 + '%'}} className="writeup">
                                     The tracker displays habbits completed in the last seven days. Implemented with <a href="https://github.com/KyoheiG3/GridView" className="orange" target="_blank"><b>GridView API.</b></a>
                                 </p>
-                            </div>
                             <img className="proj-gif proj-shadow" src={gif3}/>
                         </div>
                     </Bounce>

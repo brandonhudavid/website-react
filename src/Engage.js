@@ -60,9 +60,11 @@ export class Engage extends React.Component {
                         Background
                         </div>
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         For the second half of their first semester in <a href="https://mdb.dev/" className="mdb" target="_blank">Mobile Developers of Berkeley,</a> new members form small teams and work on designing, developing, and deploying a mobile app for the rest of the semester. I worked on developing Engage for iOS with <a href="https://www.linkedin.com/in/shubhaja/" className="engage" target="_blank">Shubha Jagannatha</a> and <a href="https://angel.co/kayli-jiang" className="engage" target="_blank">Kayli Jiang</a> while <a href="https://www.linkedin.com/in/michelle-mao/" className="engage" target="_blank">Michelle Mao</a> and <a href="https://www.linkedin.com/in/jaiveer-singh/" className="engage" target="_blank">Jaiveer Singh</a> worked on Engage for Android.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
@@ -197,9 +199,11 @@ export class Engage extends React.Component {
                     <subtitle className="background">
                         Acknowledgments
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Thank you to Shubha, Kayli, Michelle, and Jaiveer for coming up with Engage and being awesome teammates. A big thanks to Aayush Tyagi for training us to become the best developers that we can be. And thank you to Mobile Developers of Berkeley for the extensive training program and for providing us the opportunity to develop our own app from scratch.
                     </p>
+                    </div>
                 </Bounce>
                 <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                     <h2 ref='pastworks' className="blurbs">

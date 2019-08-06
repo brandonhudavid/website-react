@@ -53,9 +53,11 @@ export class Akp extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Alpha Kappa Psi is a professional business fraternity, and UC Berkeley's chapter hosts annual professional events on campus. In the spring of 2019, I worked on creating marketing materials for the event.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>

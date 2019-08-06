@@ -57,9 +57,11 @@ export class Bottle extends React.Component {
                     <subtitle className="background">
                         Background
                     </subtitle>
+                    <div className="right-wrapper">
                     <p className="background bg-writeup">
                         Zero Waste is a University of California initiative to reduce waste across campuses and achieve zero waste by 2020. Since the fall of 2018, UC Berkeley's Moffitt Library has hosted an art exhibit themed <bottle>#MyLastTrash</bottle> in support of the initiative.
                     </p>
+                    </div>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
