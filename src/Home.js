@@ -2,8 +2,7 @@ import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import logo from './img/logo.png';
 import './Home.css';
-import sr from './ScrollReveal'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 
 export class Home extends React.Component {

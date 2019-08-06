@@ -3,22 +3,10 @@ import Bounce from 'react-reveal/Bounce';
 import './Home.css';
 import home from './img/hira/hira-home.jpg'
 import transcript from './img/hira/hira-transcript.jpg'
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
-import tracker2 from './img/habbit/habbit-tracker2.jpg'
-import tracker3 from './img/habbit/habbit-tracker3.jpg'
-import logo1 from './img/habbit/habbit-logo1.png'
-import colors from './img/habbit/habbit-colors.png'
-import logo2 from './img/habbit/habbit-logo2.png'
-import wireframe from './img/habbit/habbit-wireframe.png'
-import backend from './img/habbit/habbit-backend.png'
-import gif1 from './img/habbit/habbit-tutorial.gif'
-import gif2 from './img/habbit/habbit-perform.gif'
-import gif3 from './img/habbit/habbit-tracker.gif'
-import photo from './img/habbit/habbit-photo.JPG'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Hira extends React.Component {
 
     constructor(props) {
         super(props); 
@@ -104,8 +92,8 @@ export class Habbit extends React.Component {
                         Hira is for all note-takers, young or old. Hira's live transcripts keep professionals engaged and present at meetings. Hira's highlighting and annotation features also help students remember key points.
                     </p>
                     <div className="proj-collection">
-                        <img data-sr="enter bottom move 50px wait 0.2s" className="proj-img40 proj-shadow" src={home}/>
-                        <img data-sr="enter bottom move 50px wait 0.25s" className="proj-img40 proj-shadow" src={transcript}/>
+                        <img  className="proj-img40 proj-shadow" src={home}/>
+                        <img className="proj-img40 proj-shadow" src={transcript}/>
                     </div>
                     <div className="proj-collection" style={{marginBottom: 4 + '%'}}>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/lHv5MdZoAEI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -141,4 +129,4 @@ export class Habbit extends React.Component {
     }
 }
 
-export default Habbit;
+export default Hira;

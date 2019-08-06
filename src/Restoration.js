@@ -3,9 +3,9 @@ import Bounce from 'react-reveal/Bounce';
 import './Home.css';
 import restoration from './img/restoration/restoration-page.jpg'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Bottle extends React.Component {
+export class Restoration extends React.Component {
 
     constructor(props) {
         super(props); 
@@ -72,7 +72,7 @@ export class Bottle extends React.Component {
                     </p>
                     <div className="proj-collection">
                         <div style={{display: "inline-block"}}>
-                            <img data-sr="enter bottom move 50px wait 0.2s" className="proj-photo proj-shadow" src={restoration}/>
+                            <img  className="proj-photo proj-shadow" src={restoration}/>
                         </div>
                     </div>
                 </Bounce>
@@ -86,4 +86,4 @@ export class Bottle extends React.Component {
     }
 }
 
-export default Bottle;
+export default Restoration;

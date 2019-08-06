@@ -6,8 +6,7 @@ import linkedin from './img/linkedin-logo.png'
 import github from './img/github-logo.png'
 import resume from './img/BrandonDavid_Resume.pdf'
 import './About.css';
-import sr from './ScrollReveal'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class About extends React.Component {
 
@@ -30,7 +29,7 @@ export class About extends React.Component {
                 <div style={{display: "inline-block"}}>
                     <Bounce top delay={100}>
                         <div ref="v" className="brandon">
-                            <img src={brandon} />
+                            <img src={brandon} alt="Brandon David" />
                         </div>
                     </Bounce>
                     <div id="about-container">
@@ -59,14 +58,14 @@ export class About extends React.Component {
                         <a href="https://github.com/brandonhudavid" target="_blank"><img ref="vi" src={github} /></a>
                     </div>
                 </Bounce>
+                <Bounce right delay={300}>
                     <a href={resume} target="_blank">
-                    <Bounce right delay={300}>
-                        <h2 ref="iv" className="blurbs action-link clickable">Click here for my resume.</h2>
-                    </Bounce>
+                        <h2 ref="iv" className="resume action-link clickable">Click here for my resume.</h2>
                     </a>
+                </Bounce>
             </div>
             <Bounce left delay={400}>
-                <div ref="vi" style={{float: 'left'}}>
+                <div className="contact">
                     <p>
                         Interested in working together?<br/>
                         Feel free to email me at <a className="orange">brandonhudavid@berkeley.edu</a> :)

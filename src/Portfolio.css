@@ -115,7 +115,13 @@ p {
 }
 
 .blurbs {
-    float: right;
+    /* float: right; */
+    display: block;
+    text-align: right;
+    color: #414141;
+}
+
+.resume {
     text-align: right;
     color: #414141;
 }
@@ -190,15 +196,16 @@ p {
 }
 
 .social {
-    float: left;
-    width: 50%;
+    display: block;
+    text-align: left;
+    width: 100%;
 }
 
 .social img {
     margin-left: 1vw;
     margin-right: 1vw;
     /* margin: auto; */
-    float: left;
+    text-align: left;
     width: 52px;
     height: 52px;
     opacity: 0.5;

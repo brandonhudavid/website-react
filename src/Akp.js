@@ -8,7 +8,7 @@ import flyer3 from './img/akp/akp-flyer3.png'
 import final from './img/akp/akp-flyer-final.jpg'
 import cover from './img/akp/akp-cover.jpg'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class Akp extends React.Component {
 

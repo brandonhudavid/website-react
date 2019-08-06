@@ -6,9 +6,9 @@ import prev1 from './img/safely/here-preview1.png'
 import prev2 from './img/safely/here-preview2.png'
 import prev3 from './img/safely/here-preview3.png'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Safely extends React.Component {
 
     constructor(props) {
         super(props); 
@@ -91,4 +91,4 @@ export class Habbit extends React.Component {
     }
 }
 
-export default Habbit;
+export default Safely;

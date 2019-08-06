@@ -29,19 +29,30 @@ subtitle {
     text-align: right;
 }
 
+.right-wrapper {
+    display: block;
+    text-align: right;
+}
+
 .bg-writeup {
+    display: inline-block;
     width: 80%;
-    float: right;
-    margin: auto;
+    text-align: right;
+    margin-right: 0;
     margin-bottom: 40px;
 }
 
-.writeup {
-    width: 80%;
-    float: left;
+.left-wrapper {
+    display: block;
     text-align: left;
-    margin: auto;
-    padding-bottom: 40px;
+}
+
+.writeup {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 40px;
 }
 
 nav {
@@ -102,7 +113,7 @@ h2 {
 
 .action-link {
     text-decoration: underline;
-    float: right;
+    /* float: right; */
     font-weight: 700;
 }
 
@@ -125,7 +136,7 @@ orange {
 }
 
 .titles {
-    float: right;
+    /* float: right; */
     text-align: right;
     color: #414141;
     text-decoration: none;
@@ -133,7 +144,7 @@ orange {
 }
 
 .blurbs {
-    float: right;
+    /* float: right; */
     text-align: right;
     color: #414141;
 }
@@ -144,7 +155,8 @@ orange {
 }
 
 .filter {
-    float: left;
+    text-align: left;
+    display: block;
     width: 60%;
     padding-top: 16px;
 }
@@ -180,7 +192,8 @@ orange {
 }
 
 .projects {
-    float: left;
+    text-align: left;
+    display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px
 }
@@ -277,35 +290,35 @@ engage {
 
 .proj-img20 {
     vertical-align: middle;
-    width: 20%;
-    margin: -2% 5% 3.5% 0;
+    width: 300px;
+    margin: 0 20px 32px 20px;
 }
 
 .proj-img30 {
     vertical-align: middle;
-    width: 30%;
-    margin: -2% 2% 3.5% 0;
+    width: 440px;
+    margin: 0 20px 32px 20px;
 }
 
 .proj-img40 {
     vertical-align: middle;
-    width: 45%;
-    margin: -2.5% 5% 2.5% 0;
+    width: 480px;
+    margin: 0 20px 32px 20px;
 }
 
 .proj-img100 {
     vertical-align: middle;
-    width: 100%
+    width: 1800px;
 }
 
 .proj-photo {
-    width: 50%;
+    width: 800px;
     display: block;
     justify-content: center;
     text-align: center;
     float: none;
     margin: auto;
-    margin-bottom: 5%;
+    margin-bottom: 40px;
 }
 
 .column-wrapper {

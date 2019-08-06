@@ -1,22 +1,10 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import './Home.css';
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
-import tracker2 from './img/habbit/habbit-tracker2.jpg'
-import tracker3 from './img/habbit/habbit-tracker3.jpg'
-import logo1 from './img/habbit/habbit-logo1.png'
-import colors from './img/habbit/habbit-colors.png'
-import logo2 from './img/habbit/habbit-logo2.png'
-import wireframe from './img/habbit/habbit-wireframe.png'
-import backend from './img/habbit/habbit-backend.png'
-import gif1 from './img/habbit/habbit-tutorial.gif'
-import gif2 from './img/habbit/habbit-perform.gif'
-import gif3 from './img/habbit/habbit-tracker.gif'
-import photo from './img/habbit/habbit-photo.JPG'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Innod extends React.Component {
 
     constructor(props) {
         super(props); 
@@ -64,17 +52,17 @@ export class Habbit extends React.Component {
                         </div>
                     </subtitle>
                     <p className="background bg-writeup">
-                        Every semester, Innovative Design—the premier creative agency at UC Berkeley—hosts the Introduction to Photoshop and Illustrator class, one of the most popular student-led classes at UC Berkeley that receives hundreds of applicants per semester. The class teaches beginners how to use Photoshop and Illustrator as well as apply basic design principles. In the fall of 2018, I had the privilege of leading a class of 30 students that involved in-class lectures, tutorials, and weekly homeworks.
+                        Every semester, Innovative Design—the premier creative agency at UC Berkeley—hosts the Introduction to Photoshop and Illustrator class, one of the most popular student-led classes at UC Berkeley that receives hundreds of applicants per semester. The class teaches beginners how to use Photoshop and Illustrator as well as apply basic design principles.
                     </p>
                 </Bounce>
                 <Bounce left delay={200}>
                     <subtitle>
                         <div>
-                        More Stuff
+                        Curriculum
                         </div>
                     </subtitle>
                     <p className="writeup">
-                        Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. Lorem ipsum eat some dimsum. 
+                        In the fall of 2018, I led a weekly 2-hour section of 30 students with little to no prior experience in digital design. The curriculum focuses on learning Illustrator for more than half of the semester, and then transitions into exploring Photoshop techniques. Students are given weekly homework assignments that allow them to apply the skills they learned in section. They also have midterm and final assignments, allowing them to display the culmination of what they learned about Illustrator and Photoshop throughout the semester.
                     </p>
                 </Bounce>
                 <Link to={process.env.PUBLIC_URL + "/portfolio"}>
@@ -87,4 +75,4 @@ export class Habbit extends React.Component {
     }
 }
 
-export default Habbit;
+export default Innod;

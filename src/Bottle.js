@@ -1,7 +1,6 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import './Home.css';
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
 import process1 from './img/bottle/bottle-process1.png'
 import process2 from './img/bottle/bottle-process2.png'
 import process3 from './img/bottle/bottle-process3.png'
@@ -10,7 +9,7 @@ import process5 from './img/bottle/bottle-process5.png'
 import bottle from './img/bottle/bd_bottle.png'
 import pic from './img/bottle/bottle-pic.jpg'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class Bottle extends React.Component {
 
@@ -79,9 +78,9 @@ export class Bottle extends React.Component {
                     </p>
                     <div className="proj-collection">
                         <div style={{display: "inline-block"}}>
-                        <img data-sr="enter bottom move 50px wait 0.2s" class="proj-img20 proj-shadow" src={process1}/>
-                        <img data-sr="enter bottom move 50px wait 0.25s" class="proj-img20 proj-shadow" src={process2}/>
-                        <img data-sr="enter bottom move 50px wait 0.3s" class="proj-img20 proj-shadow" src={process3}/>
+                        <img class="proj-img20 proj-shadow" src={process1}/>
+                        <img class="proj-img20 proj-shadow" src={process2}/>
+                        <img class="proj-img20 proj-shadow" src={process3}/>
                         </div>
                     </div>
                 </Bounce>
@@ -90,8 +89,8 @@ export class Bottle extends React.Component {
                     To juxtapose the reusable and plastic bottles' effects on the environment, I grouped several plastic bottles together on one side and the single reusable on the other. I then added highlights and shadows for more dimensionality, removed the plastic bottle outlines to make the overall design cleaner, and made the background blue-green to coincide with the zero waste theme.
                     </p>
                     <div className="proj-collection">
-                        <img data-sr="enter bottom move 50px wait 0.2s" className="proj-img40 proj-shadow" src={process4}/>
-                        <img data-sr="enter bottom move 50px wait 0.25s" className="proj-img40 proj-shadow" src={process5}/>
+                        <img className="proj-img40 proj-shadow" src={process4}/>
+                        <img className="proj-img40 proj-shadow" src={process5}/>
                     </div>
                 </Bounce>
                 <Bounce left delay={200}>
@@ -100,11 +99,11 @@ export class Bottle extends React.Component {
                     </p>
                     <div className="proj-collection">
                         <div style={{display: "inline-block"}}>
-                            <img data-sr="enter bottom move 50px wait 0.2s" className="proj-photo proj-shadow" src={bottle}/>
+                            <img className="proj-photo proj-shadow" src={bottle}/>
                         </div>
                     </div>
                     <div className="proj-collection">
-                        <img data-sr="enter bottom move 50px wait 0.2s" className="proj-photo proj-shadow" src={pic}/>
+                        <img className="proj-photo proj-shadow" src={pic}/>
                     </div>
                 </Bounce>
                 <Link to={process.env.PUBLIC_URL + "/portfolio"}>

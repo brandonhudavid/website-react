@@ -12,7 +12,6 @@ import bdla from './img/bdla/bdla.png'
 import whitney from './img/whitney/whitney.png'
 import akp from './img/akp/akp.png'
 import './Portfolio.css'
-import sr from './ScrollReveal'
 
 export class Project extends React.Component {
 

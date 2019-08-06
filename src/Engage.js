@@ -9,22 +9,10 @@ import design1 from './img/engage/engage-design1.jpg'
 import design2 from './img/engage/engage-design2.png'
 import design3 from './img/engage/engage-design3.png'
 import dev1 from './img/engage/engage-dev1.jpg'
-import tracker1 from './img/habbit/habbit-tracker1.jpg'
-import tracker2 from './img/habbit/habbit-tracker2.jpg'
-import tracker3 from './img/habbit/habbit-tracker3.jpg'
-import logo1 from './img/habbit/habbit-logo1.png'
-import colors from './img/habbit/habbit-colors.png'
-import logo2 from './img/habbit/habbit-logo2.png'
-import wireframe from './img/habbit/habbit-wireframe.png'
-import backend from './img/habbit/habbit-backend.png'
-import gif1 from './img/habbit/habbit-tutorial.gif'
-import gif2 from './img/habbit/habbit-perform.gif'
-import gif3 from './img/habbit/habbit-tracker.gif'
-import photo from './img/habbit/habbit-photo.JPG'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Engage extends React.Component {
 
     constructor(props) {
         super(props); 
@@ -223,4 +211,4 @@ export class Habbit extends React.Component {
     }
 }
 
-export default Habbit;
+export default Engage;

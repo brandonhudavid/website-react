@@ -1,6 +1,5 @@
 import React from 'react';
 import './Portfolio.css';
-import sr from './ScrollReveal'
 import FolioData from "./FolioData"
 import Project from "./Project"
 import logo from './img/logo.png';
@@ -11,7 +10,7 @@ import graphic_on from "./img/graphic-on.png"
 import swe_off from "./img/swe-off.png"
 import product_off from "./img/product-off.png"
 import graphic_off from "./img/graphic-off.png"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 export class Portfolio extends React.Component {
 
@@ -206,7 +205,7 @@ export class Portfolio extends React.Component {
                 </div>
 
                 <div id="container">
-                    <div>
+                    <div style={{display: "block"}}>
                         {this.filterProjects().map((project, index) =>
                             this.bounceDirection(project, index)
                         )}

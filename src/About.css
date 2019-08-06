@@ -182,24 +182,14 @@ p {
     text-decoration: underline;
 }
 
-.social {
-    float: left;
-    width: 50%;
-}
-
-.social img {
-    margin-left: 1vw;
-    margin-right: 1vw;
-    /* margin: auto; */
-    float: left;
-    width: 52px;
-    height: 52px;
-    opacity: 0.5;
-    transition: ease 0.25s;
-}
-
 .social img:hover {
     opacity: 1;
+}
+
+.contact {
+    display: block;
+    text-align: left;
+    width: 60%;
 }
 
 @media (orientation: portrait) {
@@ -278,5 +268,9 @@ p {
         margin-left: 20px;
         margin-right: 20px;
         opacity: 1;
+    }
+
+    .contact {
+        width: 100%;
     }
 }

@@ -4,8 +4,6 @@ import './Home.css';
 import Home from './Home';
 import About from "./About";
 import Portfolio from "./Portfolio";
-import FolioData from "./FolioData"
-import Project from "./Project"
 import Habbit from "./Habbit"
 import Bottle from "./Bottle"
 import Restoration from "./Restoration"
@@ -16,99 +14,16 @@ import Innod from "./Innod"
 import Engage from "./Engage"
 import Ford from "./Ford"
 import Akp from "./Akp"
-import logo from './img/logo.png';
-import sr from './ScrollReveal'
 import swe_on from "./img/swe-on.png"
-import ios_on from "./img/ios-on.png"
 import product_on from "./img/product-on.png"
 import graphic_on from "./img/graphic-on.png"
 import swe_off from "./img/swe-off.png"
-import ios_off from "./img/ios-off.png"
 import product_off from "./img/product-off.png"
 import graphic_off from "./img/graphic-off.png"
 import Bounce from 'react-reveal/Bounce';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { createBrowserHistory } from 'history';
+import { HashRouter } from "react-router-dom";
 import Error from "./Error"
-// import { withRouter } from "react-router-dom";
-
-// class Portfolio extends React.Component {
-
-//     filterProjects() {
-//         let proj = [];
-//         for (var i=0; i < FolioData.projects.length; i++) {
-//             var valid = true;
-//             let filters = FolioData.projects[i].filters;
-//             for (var j=0; j < this.props.filters.length; j++) {
-//                 if (!filters.includes(this.props.filters[j])) {
-//                     valid = false;
-//                     console.log("invalid", "proj filters: ", filters, "props needed: ", this.props.filters);
-//                     break;
-//                 }
-//             }
-//             if (valid) {
-//                 console.log("valid: ", FolioData.projects[i].name);
-//                 proj = proj.concat([FolioData.projects[i]])
-//             }
-//         }
-//         console.log("all valid projs:");
-//         for (var i=0; i < proj.length; i++) {
-//             console.log(proj.name);
-//         }
-//         return proj;
-//     }
-
-//     bounceDirection(project, index) {
-//         if (index == 0) {
-//             return (
-//                 <Bounce left>
-//                     <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-//                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-//                     </div>
-//                 </Bounce>
-//             )
-//         }
-//         if (index == 1) {
-//             return (
-//                 <Bounce right delay={100}>
-//                     <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-//                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-//                     </div>
-//                 </Bounce>
-//             )
-//         }
-//         if (index % 2 == 0) {
-//             return (
-//                 <Bounce left delay={200}>
-//                     <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-//                         <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-//                     </div>
-//                 </Bounce>
-//             )
-//         }
-//         return (
-//             <Bounce right delay={250}>
-//                 <div key={project.id} className="clickable" onClick={() => this.props.fn(project.id)}>
-//                     <Project key={project.id} id={project.id} name={project.name} description={project.description} date={project.date} tags={project.tags} index={index} />
-//                 </div>
-//             </Bounce>
-//         )
-//     }
-
-    // render(){
-    //     return (
-    //         <div>
-    //             <div id="container">
-    //                 <div>
-    //                     {this.filterProjects().map((project, index) =>
-    //                         this.bounceDirection(project, index)
-    //                     )}
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
-// }
 
 const renderMergedProps = (component, ...rest) => {
     const finalProps = Object.assign({}, ...rest);
@@ -125,17 +40,6 @@ const PropsRoute = ({component, ...rest}) => {
     );
 }
 
-// class ScrollToTop extends React.Component {
-//     componentDidUpdate(prevProps) {
-//         window.scrollTo(0, 0);
-//     }
-  
-//     render() {
-//       return this.props.children
-//     }
-// }  
-// export default withRouter(ScrollToTop);
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -151,10 +55,6 @@ class App extends React.Component {
             graphicFilter: false,
             filters: []
         }
-
-        let history = new createBrowserHistory({
-            basename: process.env.PUBLIC_URL,
-        });
     }
 
     toHome() {
@@ -239,28 +139,12 @@ class App extends React.Component {
         }
     }
 
-    // pastWorks() {
-    //     if (this.state.currentPage == "Home") {
-    //         return (
-    //             <div>
-    //                 <Bounce right delay={200}>
-    //                 <h2 ref='pastworks' className="blurbs">
-    //                     <div className="action-link" onClick={() => this.toFolio()}><a className="pastworks clickable">Check out some of my past works.</a></div>
-    //                 </h2>
-    //                 </Bounce>
-    //             </div>
-    //         );
-    //     }
-    // }
-
     backToFolio() {
         if (this.state.currentPage == "Project" && this.state.project != "") {
             return (
-                // <Bounce right delay={200}>
-                    <h2 ref='pastworks' className="blurbs">
-                        <div class="action-link"><a class="pastworks clickable" onClick={() => this.toFolio()}>Back to my portfolio.</a></div>
-                    </h2>
-                // </Bounce>
+                <h2 ref='pastworks' className="blurbs">
+                    <div class="action-link"><a class="pastworks clickable" onClick={() => this.toFolio()}>Back to my portfolio.</a></div>
+                </h2>
             )
         }
     }
@@ -362,35 +246,26 @@ class App extends React.Component {
         })
     }
 
-    scrollToTop() {
-        if ('scrollRestoration' in this.history) {
-            this.history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-    }
-
     render() {
         return (
-            <Router onUpdate={this.scrollToTop} history={this.history} basename={process.env.PUBLIC_URL}>
-            {/* <ScrollToTop> */}
-            <Switch>
-                <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
-                <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
-                <PropsRoute path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} filters={this.state.filters} />
-                <Route path={process.env.PUBLIC_URL + "/ford"} component={Ford} />
-                <Route path={process.env.PUBLIC_URL + "/akp"} component={Akp} />
-                <Route path={process.env.PUBLIC_URL + "/engage"} component={Engage} />
-                <Route path={process.env.PUBLIC_URL + "/innod"} component={Innod} />
-                <Route path={process.env.PUBLIC_URL + "/safely"} component={Safely} />
-                <Route path={process.env.PUBLIC_URL + "/here"} component={Here} />
-                <Route path={process.env.PUBLIC_URL + "/habbit"} component={Habbit} />
-                <Route path={process.env.PUBLIC_URL + "/hira"} component={Hira} />
-                <Route path={process.env.PUBLIC_URL + "/bottle"} component={Bottle} />
-                <Route path={process.env.PUBLIC_URL + "/restoration"} component={Restoration} />
-                <Route component={Error} />
-            </Switch>
-            {/* </ScrollToTop> */}
-            </Router>
+            <HashRouter basename={process.env.PUBLIC_URL}>
+                <Switch>
+                    <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+                    <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
+                    <PropsRoute path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} filters={this.state.filters} />
+                    <Route path={process.env.PUBLIC_URL + "/ford"} component={Ford} />
+                    <Route path={process.env.PUBLIC_URL + "/akp"} component={Akp} />
+                    <Route path={process.env.PUBLIC_URL + "/engage"} component={Engage} />
+                    <Route path={process.env.PUBLIC_URL + "/innod"} component={Innod} />
+                    <Route path={process.env.PUBLIC_URL + "/safely"} component={Safely} />
+                    <Route path={process.env.PUBLIC_URL + "/here"} component={Here} />
+                    <Route path={process.env.PUBLIC_URL + "/habbit"} component={Habbit} />
+                    <Route path={process.env.PUBLIC_URL + "/hira"} component={Hira} />
+                    <Route path={process.env.PUBLIC_URL + "/bottle"} component={Bottle} />
+                    <Route path={process.env.PUBLIC_URL + "/restoration"} component={Restoration} />
+                    <Route component={Error} />
+                </Switch>
+            </HashRouter>
         );
     }
 }

@@ -17,9 +17,9 @@ import tracker from './img/ford/ford-tracker.png'
 import flights_map from './img/ford/ford-flights-map.png'
 import photo from './img/ford/ford-photo.jpg'
 import logo from './img/logo.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
-export class Habbit extends React.Component {
+export class Ford extends React.Component {
 
     constructor(props) {
         super(props); 
@@ -238,4 +238,4 @@ export class Habbit extends React.Component {
     }
 }
 
-export default Habbit;
+export default Ford;
