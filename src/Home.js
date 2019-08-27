@@ -3,6 +3,7 @@ import Bounce from 'react-reveal/Bounce';
 import logo from './img/logo.png';
 import './Home.css';
 import { BrowserRouter as Route, Link } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 
 export class Home extends React.Component {
@@ -11,7 +12,13 @@ export class Home extends React.Component {
         super(props);
     }
 
+    initReactGA(){
+      ReactGA.initialize('UA-112309500-1')
+      ReactGA.pageview(window.location.pathname)
+    }
+
     render(){
+        this.initReactGA()
         return (
             <div>
                 <header>
