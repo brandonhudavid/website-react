@@ -37,15 +37,15 @@ export class About extends React.Component {
                         <Bounce top><h1 ref="i" className="titles" style={{marginTop: 'auto'}}>Hi there!</h1></Bounce>
                         <Bounce right delay={100}>
                             <p ref="ii" className="blurbs">
-                                My name is Brandon David. I am a rising third-year studying <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science</a> at UC Berkeley.
-                                This summer, I am working in San Francisco as a software engineering intern for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely,</a> the world's leading product experimentation platform. I have previously interned as a research engineer at <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a>
+                                My name is Brandon David. I am a third-year studying <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science</a> at UC Berkeley.
+                                This past summer, I worked in San Francisco as a software engineering intern for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely,</a> the world's leading A/B testing platform. I have previously interned as a research engineer at <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a>
                             </p>
                         </Bounce>
                         </div>
                         <div>
                             <Bounce right delay={200}>
                             <p ref="iii" className="blurbs">
-                                I am an iOS developer for <a className="mdb" href="https://mdb.dev/" target="_blank">Mobile Developers of Berkeley,</a> UC Berkeley's pre-incubator for businesses and mobile applications, and a student instructor for <a className="innod" href="https://innovativedesign.club/decals/" target="_blank">Intro to Photoshop and Illustrator,</a> one of UC Berkeley's most popular student-led classes, hosted by <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design.</a>
+                                I am the design lead for <a className="mdb" href="https://mdb.dev/" target="_blank">MDB,</a> UC Berkeley's pre-incubator for businesses and mobile applications, and a student instructor for <a className="innod" href="https://innovativedesign.club/decals/" target="_blank">Intro to Photoshop and Illustrator,</a> one of UC Berkeley's most popular student-led classes, hosted by <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design.</a>
                             </p>
                             </Bounce>
                         </div>

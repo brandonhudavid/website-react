@@ -11,6 +11,7 @@ import restoration from './img/innod/restoration.png'
 import bdla from './img/bdla/bdla.png'
 import whitney from './img/whitney/whitney.png'
 import akp from './img/akp/akp.png'
+import optimizely from './img/optimizely/optimizely.png'
 import './Portfolio.css'
 
 export class Project extends React.Component {
@@ -41,6 +42,8 @@ export class Project extends React.Component {
                 return whitney;
             case "akp":
                 return akp;
+            case "optimizely":
+                return optimizely;
             default:
                 return;
         }

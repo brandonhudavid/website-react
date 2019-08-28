@@ -63,24 +63,24 @@ export class Here extends React.Component {
 
                 <Bounce right delay={200}>
                     <subtitle className="background">
-                        <div>
-                            Reflections
-                        </div>
+                        Reflections
                     </subtitle>
-                    <p className="background bg-writeup">
-                        Overall, interning at HERE was a great learning opportunity! As my first undergraduate internship, I was introduced to the concept of Scrum as a framework for project management since my team would have daily Scrum meetings and manage their tasks on Jira boards.<br/><br/>
-                        I also realized how settling into a new team requires patience. In my first few days at HERE, I was intimidated by the huge codebase of files, not even knowing which scripts I would be working with. However, after the first week, I found myself gradually understanding parts of the codebase and asking my team members to help fill any gaps of knowledge.
-                    </p>
+                    <div className="right-wrapper">
+                        <p className="background bg-writeup">
+                            Overall, interning at HERE was a great learning opportunity. As my first undergraduate internship, I was introduced to the concept of Scrum as a framework for project management since my team would have daily Scrum meetings and manage their tasks on JIRA boards.<br/><br/>
+                            I also realized how settling into a new team requires patience. In my first few days at HERE, I was intimidated by the huge codebase of files, not even knowing which scripts I would be working with. However, after the first week, I found myself gradually understanding parts of the codebase and asking my team members to help fill any gaps of knowledge.
+                        </p>
+                    </div>
                 </Bounce>
                 <Bounce right delay={200}>
-                    <subtitle>
-                        <div>
-                            NDA
-                        </div>
+                    <subtitle className="background">
+                        NDA
                     </subtitle>
-                    <p className="writeup">
-                    Due to non-disclosure agreements I cannot share most of my work, but here is a snippet of my intern report, which includes a runtime improvement of 95% in one of our team's key modeling algorithms.
-                    </p>
+                    <div className="right-wrapper">
+                        <p className="background bg-writeup">
+                        Due to non-disclosure agreements I cannot share most of my work, but here is a snippet of my intern report, which includes a runtime improvement of 95% in one of our team's key modeling algorithms.
+                        </p>
+                    </div>
                     <div className="proj-collection">
                         <img className="proj-img40 proj-shadow" src={deck1}/>
                         <img className="proj-img40 proj-shadow" src={deck2}/>

@@ -14,6 +14,7 @@ import Innod from "./Innod"
 import Engage from "./Engage"
 import Ford from "./Ford"
 import Akp from "./Akp"
+import Optimizely from "./Optimizely"
 import swe_on from "./img/swe-on.png"
 import product_on from "./img/product-on.png"
 import graphic_on from "./img/graphic-on.png"
@@ -131,6 +132,8 @@ class App extends React.Component {
                         return <Ford />
                     case "akp":
                         return <Akp />
+                    case "akp":
+                        return <Optimizely />
                     default:
                         return;
                 }
@@ -253,8 +256,8 @@ class App extends React.Component {
                     <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
                     <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
                     <PropsRoute path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} filters={this.state.filters} />
+                    <Route path={process.env.PUBLIC_URL + "/optimizely"} component={Optimizely} />
                     <Route path={process.env.PUBLIC_URL + "/ford"} component={Ford} />
-                    <Route path={process.env.PUBLIC_URL + "/akp"} component={Akp} />
                     <Route path={process.env.PUBLIC_URL + "/engage"} component={Engage} />
                     <Route path={process.env.PUBLIC_URL + "/innod"} component={Innod} />
                     <Route path={process.env.PUBLIC_URL + "/safely"} component={Safely} />
@@ -263,6 +266,7 @@ class App extends React.Component {
                     <Route path={process.env.PUBLIC_URL + "/hira"} component={Hira} />
                     <Route path={process.env.PUBLIC_URL + "/bottle"} component={Bottle} />
                     <Route path={process.env.PUBLIC_URL + "/restoration"} component={Restoration} />
+                    
                     <Route component={Error} />
                 </Switch>
             </HashRouter>

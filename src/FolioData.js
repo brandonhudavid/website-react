@@ -1,20 +1,20 @@
 const FolioData = {
     projects: [
         {
+            id: "optimizely",
+            name: "OPTIMIZELY",
+            description: "Software engineer intern for Optimizely's Full Stack SDKs.",
+            date: "JUNE 2019 - AUGUST 2019",
+            tags: ["frontend development, API development"],
+            filters: ["sweFilter"]
+        },
+        {
             id: "ford",
             name: "FORD UAV",
             description: "Designing a mobile app to help Ford's drones team manage their aircraft flights.",
             date: "MARCH 2019 - MAY 2019",
             tags: ["product design"],
             filters: ["productFilter"]
-        },
-        {
-            id: "akp",
-            name: "AKP TECHTALKS",
-            description: "A tech conference hosted at UC Berkeley.",
-            date: "MARCH 2019",
-            tags: ["graphic design, marketing design"],
-            filters: ["graphicFilter"]
         },
         {
             id: "engage",
@@ -80,6 +80,14 @@ const FolioData = {
             tags: ["photo editing", "teaching"],
             filters: ["graphicFilter"]
         },
+        // {
+        //     id: "akp",
+        //     name: "AKP TECHTALKS",
+        //     description: "A tech conference hosted at UC Berkeley.",
+        //     date: "MARCH 2019",
+        //     tags: ["graphic design, marketing design"],
+        //     filters: ["graphicFilter"]
+        // },
         // {
         //     id: "bdla",
         //     name: "BDLA",
