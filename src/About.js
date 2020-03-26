@@ -38,14 +38,20 @@ export class About extends React.Component {
                         <Bounce right delay={100}>
                             <p ref="ii" className="blurbs">
                                 My name is Brandon David. I am a third-year studying <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science</a> at UC Berkeley.
-                                This past summer, I worked in San Francisco as a software engineering intern for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely,</a> the world's leading A/B testing platform. I have previously interned as a research engineer at <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a>
                             </p>
                         </Bounce>
                         </div>
                         <div>
                             <Bounce right delay={200}>
                             <p ref="iii" className="blurbs">
-                                I am the design lead for <a className="mdb" href="https://mdb.dev/" target="_blank">MDB,</a> UC Berkeley's pre-incubator for businesses and mobile applications, and a student instructor for <a className="innod" href="https://innovativedesign.club/decals/" target="_blank">Intro to Photoshop and Illustrator,</a> one of UC Berkeley's most popular student-led classes, hosted by <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design.</a>
+                                I am a web developer for <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design</a>, UC Berkeley's premier creative agency. This past summer, I worked in San Francisco as a software engineering intern for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely,</a> the world's leading A/B testing platform. I have previously interned as a research engineer at <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a>
+                            </p>
+                            </Bounce>
+                        </div>
+                        <div>
+                            <Bounce right delay={250}>
+                            <p ref="iii" className="blurbs">
+                                I am currently searching for software engineering internships in Summer 2020! Feel free to email me at <a className="orange">brandonhudavid@berkeley.edu</a> :)
                             </p>
                             </Bounce>
                         </div>
@@ -64,14 +70,14 @@ export class About extends React.Component {
                     </a>
                 </Bounce>
             </div>
-            <Bounce left delay={400}>
+            {/* <Bounce left delay={400}>
                 <div className="contact">
                     <p>
                         Interested in working together?<br/>
                         Feel free to email me at <a className="orange">brandonhudavid@berkeley.edu</a> :)
                     </p>
                 </div>
-            </Bounce>
+            </Bounce> */}
             </div>
         );
     }

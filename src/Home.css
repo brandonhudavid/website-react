@@ -6,7 +6,7 @@ body {
     width: 80%;
     height: 100%;
     margin: auto;
-    background-image: url(img/bd-quarter.png);
+    background-image: url("img/bd-quarter.png");
     background-repeat: no-repeat;
     background-size: 100%;
     color: #414141;
