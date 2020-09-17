@@ -15,6 +15,7 @@ import Engage from "./Engage"
 import Ford from "./Ford"
 import Akp from "./Akp"
 import Optimizely from "./Optimizely"
+import ArtDesign from "./ArtDesign"
 import swe_on from "./img/swe-on.png"
 import product_on from "./img/product-on.png"
 import graphic_on from "./img/graphic-on.png"
@@ -49,6 +50,7 @@ class App extends React.Component {
             home: true,
             about: false,
             folio: false,
+            art: false,
             project: "",
             sweFilter: false,
             iosFilter: false,
@@ -65,6 +67,7 @@ class App extends React.Component {
             home: true,
             about: false,
             folio: false,
+            art: false,
             project: ""
         })
     }
@@ -76,6 +79,7 @@ class App extends React.Component {
             home: false,
             about: true,
             folio: false,
+            art: false,
             project: ""
         })
     }
@@ -87,9 +91,23 @@ class App extends React.Component {
             home: false,
             about: false,
             folio: true,
+            art: false,
             project: ""
         })
     }
+
+    toArt() {
+        window.scrollTo(0, 0);
+        this.setState({
+            currentPage: "Art",
+            home: false,
+            about: false,
+            folio: false,
+            art: true,
+            project: ""
+        })
+    }
+
 
     toProject = (id) => {
         window.scrollTo(0, 0);
@@ -98,6 +116,19 @@ class App extends React.Component {
             home: false,
             about: false,
             folio: false,
+            art: false,
+            project: id
+        })
+    }
+
+    toArtwork = (id) => {
+        window.scrollTo(0, 0);
+        this.setState({
+            currentPage: "Artwork",
+            home: false,
+            about: false,
+            folio: false,
+            art: false,
             project: id
         })
     }
@@ -110,7 +141,9 @@ class App extends React.Component {
                 return <About />;
             case "Portfolio":
                 return <Portfolio filters={this.state.filters} fn={this.toProject} />;
-            case "Project":
+            case "Art":
+                return <ArtDesign fn={this.toArtwork}/>;
+            case "Project", "Artwork":
                 switch(this.state.project) {
                     case "habbit":
                         return <Habbit />
@@ -147,6 +180,16 @@ class App extends React.Component {
             return (
                 <h2 ref='pastworks' className="blurbs">
                     <div class="action-link"><a class="pastworks clickable" onClick={() => this.toFolio()}>Back to my portfolio.</a></div>
+                </h2>
+            )
+        }
+    }
+
+    backToArt() {
+        if (this.state.currentPage == "Artwork" && this.state.project != "") {
+            return (
+                <h2 ref='pastworks' className="blurbs">
+                    <div class="action-link"><a class="pastworks clickable" onClick={() => this.toFolio()}>Back to my art and deisgn work.</a></div>
                 </h2>
             )
         }
@@ -256,6 +299,7 @@ class App extends React.Component {
                     <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
                     <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
                     <PropsRoute path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} filters={this.state.filters} />
+                    <PropsRoute path={process.env.PUBLIC_URL + "/art"} component={ArtDesign} filters={this.state.filters} />
                     <Route path={process.env.PUBLIC_URL + "/optimizely"} component={Optimizely} />
                     <Route path={process.env.PUBLIC_URL + "/ford"} component={Ford} />
                     <Route path={process.env.PUBLIC_URL + "/engage"} component={Engage} />

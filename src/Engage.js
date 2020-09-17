@@ -40,6 +40,9 @@ export class Engage extends React.Component {
                         <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                             <a className={"selected clickable"}>Portfolio</a>
                         </Link>
+                        <Link to={process.env.PUBLIC_URL + "/art"}>
+                            <a className={"unselected clickable"}>Art&amp;Design</a>
+                        </Link>
                     </nav>
                 </header>
                 <Bounce top><h1>Engage</h1></Bounce>

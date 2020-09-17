@@ -32,6 +32,9 @@ export class Home extends React.Component {
                         <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                             <a className={"unselected clickable"}>Portfolio</a>
                         </Link>
+                        <Link to={process.env.PUBLIC_URL + "/art"}>
+                            <a className={"unselected clickable"}>Art&amp;Design</a>
+                        </Link>
                     </nav>
                 </header>
                 <Bounce left delay={800}><div className="react"><p><i>{"< /> with "}<b>{"React."}</b></i>&nbsp;&nbsp;{"⚛️✨"}</p></div></Bounce>
@@ -45,7 +48,7 @@ export class Home extends React.Component {
                     <div style={{width: 100 + '%', display: 'inline-block'}}>
                         <h2 className="blurbs">
                             Aspiring <a className="orange">developer</a> and <a className="orange">designer.</a><br/>
-                            Rising third-year at UC Berkeley.<br/>
+                            Fourth-year at UC Berkeley.<br/>
                             Electrical Engineering and Computer Science. <br/>
                         </h2>
                     </div>

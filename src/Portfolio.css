@@ -361,7 +361,11 @@ p {
     }
     
     nav {
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    header a {
+        padding-left: 20px;
     }
     
     .titles {

@@ -45,7 +45,10 @@ export class Ford extends React.Component {
                             <a className={"unselected clickable"}>About</a>
                         </Link>
                         <Link to={process.env.PUBLIC_URL + "/portfolio"}>
-                            <a className={"selected clickable"}>Portfolio</a>
+                            <a className={"unselected clickable"}>Portfolio</a>
+                        </Link>
+                        <Link to={process.env.PUBLIC_URL + "/art"}>
+                            <a className={"selected clickable"}>Art&amp;Design</a>
                         </Link>
                     </nav>
                 </header>
@@ -234,9 +237,9 @@ export class Ford extends React.Component {
                     </p>
                     </div>
                 </Bounce>
-                <Link to={process.env.PUBLIC_URL + "/portfolio"}>
+                <Link to={process.env.PUBLIC_URL + "/art"}>
                     <h2 ref='pastworks' className="blurbs">
-                        <div class="action-link"><a class="pastworks clickable">Back to my portfolio.</a></div>
+                        <div class="action-link"><a class="pastworks clickable">Back to my art and design work.</a></div>
                     </h2>
                 </Link>
             </div>

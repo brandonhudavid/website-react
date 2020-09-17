@@ -24,6 +24,9 @@ export class Error extends React.Component {
                         <Link to={process.env.PUBLIC_URL + "/portfolio"}>
                             <a className={"unselected clickable"}>Portfolio</a>
                         </Link>
+                        <Link to={process.env.PUBLIC_URL + "/art"}>
+                            <a className={"unselected clickable"}>Art&amp;Design</a>
+                        </Link>
                     </nav>
                 </header>
                 <h1>Oops!</h1>

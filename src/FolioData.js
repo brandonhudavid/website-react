@@ -14,7 +14,7 @@ const FolioData = {
             description: "Designing a mobile app to help Ford's drones team manage their aircraft flights.",
             date: "MARCH 2019 - MAY 2019",
             tags: ["product design"],
-            filters: ["productFilter"]
+            filters: ["productFilter", "artFilter"]
         },
         {
             id: "engage",
@@ -30,7 +30,7 @@ const FolioData = {
             description: "Teaching Intro to Photoshop and Illustrator, a popular student-led class at UC Berkeley.",
             date: "AUGUST 2018 - DECEMBER 2018",
             tags: ["graphic design", "teaching"],
-            filters: ["graphicFilter"]
+            filters: ["graphicFilter", "artFilter"]
         },
         {
             id: "safely",
@@ -70,7 +70,7 @@ const FolioData = {
             description: "Art piece on display in UC Berkeley's Moffitt Library, part of UC's Zero Waste Initiative.",
             date: "APRIL 2018",
             tags: ["conceptual art", "graphic design"],
-            filters: ["graphicFilter"]
+            filters: ["graphicFilter", "artFilter"]
         },
         {
             id: "restoration",
@@ -78,7 +78,7 @@ const FolioData = {
             description: "Teaching a workshop on how to colorize and restore old black-and-white photos.",
             date: "MARCH 2018",
             tags: ["photo editing", "teaching"],
-            filters: ["graphicFilter"]
+            filters: ["graphicFilter", "artFilter"]
         },
         // {
         //     id: "akp",
