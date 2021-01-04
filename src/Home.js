@@ -47,9 +47,9 @@ export class Home extends React.Component {
                     <Bounce right delay={100}>
                     <div style={{width: 100 + '%', display: 'inline-block'}}>
                         <h2 className="blurbs">
-                            Aspiring <a className="orange">developer</a> and <a className="orange">designer.</a><br/>
-                            Fourth-year at UC Berkeley.<br/>
-                            Electrical Engineering and Computer Science. <br/>
+                            Aspiring <a style={{color:'#f37120',fontWeight:700}}>developer</a> and <a style={{color:'#f37120',fontWeight:700}}>designer.</a><br/>
+                            Recent UC Berkeley graduate.<br/>
+                            Electrical Engineering and Computer Science (EECS). <br/>
                         </h2>
                     </div>
                     </Bounce>

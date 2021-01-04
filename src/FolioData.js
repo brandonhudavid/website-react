@@ -27,7 +27,7 @@ const FolioData = {
         {
             id: "innod",
             name: "PSD/AI INSTRUCTOR",
-            description: "Teaching Intro to Photoshop and Illustrator, a popular student-led class at UC Berkeley.",
+            description: "Teaching Photoshop and Illustrator, a popular student-led class at UC Berkeley.",
             date: "AUGUST 2018 - DECEMBER 2018",
             tags: ["graphic design", "teaching"],
             filters: ["graphicFilter", "artFilter"]
