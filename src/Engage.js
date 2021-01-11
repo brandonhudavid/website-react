@@ -199,6 +199,14 @@ export class Engage extends React.Component {
                     </div>
                 </Bounce>
                 <Bounce left delay={200}>
+                    <subtitle>
+                        Demo
+                    </subtitle>
+                    <div className="proj-collection" style={{marginBottom: 4 + '%'}}>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_0n3wTCS8Kc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
+                    </div>
+                </Bounce>
+                <Bounce left delay={200}>
                     <subtitle className="background">
                         Acknowledgments
                     </subtitle>

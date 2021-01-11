@@ -37,7 +37,7 @@ export class Home extends React.Component {
                         </Link>
                     </nav>
                 </header>
-                <Bounce left delay={800}><div className="react"><p><i>{"< /> with "}<b>{"React."}</b></i>&nbsp;&nbsp;{"⚛️✨"}</p></div></Bounce>
+                <Bounce left delay={800}><div className="react"><p><i>{"Made with "}<b>{"React."}</b></i>&nbsp;&nbsp;{"⚛️✨"}</p></div></Bounce>
                 <div id="home-container" style={{marginTop: 8 + '%'}}>
                     <Bounce top>
                         <div style={{width: 100 + '%', display: 'inline-block'}}>

@@ -101,7 +101,7 @@ export class Hira extends React.Component {
                         <img className="proj-img40 proj-shadow" src={transcript}/>
                     </div>
                     <div className="proj-collection" style={{marginBottom: 4 + '%'}}>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lHv5MdZoAEI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lHv5MdZoAEI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
                     </div>
                 </Bounce>
                 <Bounce left delay={200}>
