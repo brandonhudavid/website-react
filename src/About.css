@@ -112,6 +112,18 @@ p {
     color: #414141;
 }
 
+.adobe {
+    color: red;
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.adobe:hover {
+    color: white;
+    background-color: red;
+}
+
 .berkeley {
     color: navy;
     transition: ease 0.25s;

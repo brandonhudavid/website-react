@@ -40,21 +40,21 @@ export class About extends React.Component {
                         <Bounce top><h1 ref="i" className="titles" style={{marginTop: 'auto'}}>Hi there!</h1></Bounce>
                         <Bounce right delay={100}>
                             <p ref="ii" className="blurbs">
-                                My name is Brandon David. I am a recent graduate from UC Berkeley with a Bachelor's degree in <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science (EECS).</a> I graduated in the Fall of 2020.
+                                I'm Brandon David, a Fall 2020 graduate of UC Berkeley with a Bachelor's in <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science (EECS).</a> I currently work for <a className="adobe" href="https://www.adobe.com/" target="_blank">Adobe</a> as a Web Optimization and Personalization Developer. 
                             </p>
                         </Bounce>
                         </div>
                         <div>
                             <Bounce right delay={200}>
                             <p ref="iii" className="blurbs">
-                                I have previously interned as a software engineer for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely</a> and a research engineer for <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a> I have also been a web developer for <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design,</a> UC Berkeley's premier creative agency.
+                                I previously interned as a software engineer for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely</a> and a research engineer for <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a> I have also been a web developer for <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design,</a> UC Berkeley's premier creative agency.
                             </p>
                             </Bounce>
                         </div>
                         <div>
                             <Bounce right delay={250}>
                             <p ref="iii" className="blurbs">
-                                I am currently searching for New Grad Software Engineering opportunities for 2021! Feel free to reach out to me at <a style={{color:'#f37120',fontWeight:700}}>brandonhudavid@gmail.com</a> :)
+                                For business inquiries, feel free to reach out to me at <a style={{color:'#f37120',fontWeight:700}}>brandonhudavid@gmail.com</a> :)
                             </p>
                             </Bounce>
                         </div>
