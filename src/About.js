@@ -40,7 +40,7 @@ export class About extends React.Component {
                         <Bounce top><h1 ref="i" className="titles" style={{marginTop: 'auto'}}>Hi there!</h1></Bounce>
                         <Bounce right delay={100}>
                             <p ref="ii" className="blurbs">
-                                I'm Brandon David, a Fall 2020 graduate of UC Berkeley with a Bachelor's in <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science (EECS).</a> I currently work for <a className="adobe" href="https://www.adobe.com/" target="_blank">Adobe</a> as a Web Optimization and Personalization Developer. 
+                                I'm Brandon David, a Web Optimization and Personalization Developer at <a className="adobe" href="https://www.adobe.com/" target="_blank">Adobe.</a> In Fall 2020, I graduated from UC Berkeley with a Bachelor's in <a className="berkeley" href="https://eecs.berkeley.edu/" target="_blank">Electrical Engineering and Computer Science (EECS).</a>
                             </p>
                         </Bounce>
                         </div>
