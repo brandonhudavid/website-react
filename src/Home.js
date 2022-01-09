@@ -49,7 +49,7 @@ export class Home extends React.Component {
                         <h2 className="blurbs">
                             <a style={{color:'#f37120',fontWeight:700}}>Developer</a> and <a style={{color:'#f37120',fontWeight:700}}>designer.</a><br/>
                             Recent UC Berkeley graduate.<br/>
-                            Web development at <a style={{color:"red",fontWeight:700}}>Adobe.</a><br/>
+                            Web developer at <a style={{color:"red",fontWeight:700}}>Adobe.</a><br/>
                         </h2>
                     </div>
                     </Bounce>
