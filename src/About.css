@@ -148,6 +148,18 @@ p {
     background-color: #0037fe;
 }
 
+.twitchtweets {
+    color: #6441a5;
+    transition: ease 0.25s;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.twitchtweets:hover {
+    color: white;
+    background-color: #6441a5;
+}
+
 .here {
     color: rgba(0, 175, 170, 1);
     transition: ease 0.25s;

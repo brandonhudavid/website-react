@@ -4,6 +4,7 @@ import './Home.css';
 import Home from './Home';
 import About from "./About";
 import Portfolio from "./Portfolio";
+import TwitchTweets from './TwitchTweets';
 import Habbit from "./Habbit"
 import Bottle from "./Bottle"
 import Restoration from "./Restoration"
@@ -145,6 +146,8 @@ class App extends React.Component {
                 return <ArtDesign fn={this.toArtwork}/>;
             case "Project", "Artwork":
                 switch(this.state.project) {
+                    case "twitchtweets":
+                        return <TwitchTweets />
                     case "habbit":
                         return <Habbit />
                     case "bottle":
@@ -300,6 +303,7 @@ class App extends React.Component {
                     <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
                     <PropsRoute path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} filters={this.state.filters} />
                     <PropsRoute path={process.env.PUBLIC_URL + "/art"} component={ArtDesign} filters={this.state.filters} />
+                    <Route path={process.env.PUBLIC_URL + "/twitchtweets"} component={TwitchTweets} />
                     <Route path={process.env.PUBLIC_URL + "/optimizely"} component={Optimizely} />
                     <Route path={process.env.PUBLIC_URL + "/ford"} component={Ford} />
                     <Route path={process.env.PUBLIC_URL + "/engage"} component={Engage} />

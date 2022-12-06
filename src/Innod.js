@@ -73,7 +73,7 @@ export class Innod extends React.Component {
                         </div>
                     </subtitle>
                     <p className="writeup">
-                        In the fall of 2018, I led a weekly 2-hour section of 30 students with little to no prior experience in digital design. The curriculum focuses on learning Illustrator for more than half of the semester, and then transitions into exploring Photoshop techniques.
+                        In Fall 2018 and Fall 2019, I led a weekly 2-hour section of 30 students with little to no prior experience in digital design. The curriculum focuses on learning Illustrator for more than half of the semester, and then transitions into exploring Photoshop techniques.
                     </p>
                     <p className="writeup">
                         Students are given weekly homework assignments that allow them to apply the skills they learned in section. They also have midterm and final assignments, allowing them to display what they learned about Illustrator and Photoshop throughout the semester.

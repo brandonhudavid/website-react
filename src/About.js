@@ -47,7 +47,7 @@ export class About extends React.Component {
                         <div>
                             <Bounce right delay={200}>
                             <p ref="iii" className="blurbs">
-                                I previously interned as a software engineer for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely</a> and a research engineer for <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a> I have also been a web developer for <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design,</a> UC Berkeley's premier creative agency.
+                                I previously interned as a software engineer for <a className="optimizely" href="https://www.optimizely.com/" target="_blank">Optimizely</a> and a research engineer for <a className="here" href="https://www.here.com/" target="_blank">HERE Technologies.</a> I also taught an Intro to Photoshop and Illustrator class at UC Berkeley for <a className="innod" href="https://innovativedesign.club/" target="_blank">Innovative Design,</a> UC Berkeley's premier creative agency.
                             </p>
                             </Bounce>
                         </div>

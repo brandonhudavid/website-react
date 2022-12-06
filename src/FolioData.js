@@ -1,11 +1,19 @@
 const FolioData = {
     projects: [
         {
+            id: "twitchtweets",
+            name: "TWITCH TWEETS",
+            description: "React web game with 343,000+ playthroughs.",
+            date: "DECEMBER 2021 - JANUARY 2022",
+            tags: ["full-stack web development, product design"],
+            filters: ["sweFilter", "artFilter"]
+        },
+        {
             id: "optimizely",
             name: "OPTIMIZELY",
             description: "Software engineer intern for Optimizely's Full Stack SDKs.",
             date: "JUNE 2019 - AUGUST 2019",
-            tags: ["frontend development, API development"],
+            tags: ["frontend development", "API development"],
             filters: ["sweFilter"]
         },
         {
@@ -38,7 +46,7 @@ const FolioData = {
             description: "Ensuring pedestrian safety by using local crime data to suggest safer routes.",
             date: "JULY 2018 - AUGUST 2018",
             tags: ["iOS development", "product design"],
-            filters: ["sweFilter", "iosFilter", "productFilter"]
+            filters: ["artFilter"]
         },
         {
             id: "here",
@@ -48,22 +56,22 @@ const FolioData = {
             tags: ["backend development", "data visualization", "research"],
             filters: ["sweFilter"]
         },
-        {
-            id: "habbit",
-            name: "HABBIT",
-            description: "Tracking your healthy habits efficiently; inspired by bullet journaling.",
-            date: "MARCH 2018 - MAY 2018",
-            tags: ["graphic design, product design", "iOS development"],
-            filters: ["sweFilter", "iosFilter", "productFilter", "graphicFilter"]
-        },    
-        {
-            id: "hira",
-            name: "HIRA",
-            description: "The notebook that listens for you; a concept created at LA Hacks 2018.",
-            date: "MARCH 2018 - APRIL 2018",
-            tags: ["hackathon", "backend development"],
-            filters: ["sweFilter"]
-        },
+        // {
+        //     id: "habbit",
+        //     name: "HABBIT",
+        //     description: "Tracking your healthy habits efficiently; inspired by bullet journaling.",
+        //     date: "MARCH 2018 - MAY 2018",
+        //     tags: ["graphic design, product design", "iOS development"],
+        //     filters: ["sweFilter", "iosFilter", "productFilter", "graphicFilter"]
+        // },    
+        // {
+        //     id: "hira",
+        //     name: "HIRA",
+        //     description: "The notebook that listens for you; a concept created at LA Hacks 2018.",
+        //     date: "MARCH 2018 - APRIL 2018",
+        //     tags: ["hackathon", "backend development"],
+        //     filters: ["sweFilter"]
+        // },
         {
             id: "bottle",
             name: "BOTTLE",

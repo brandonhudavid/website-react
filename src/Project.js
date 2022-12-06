@@ -1,4 +1,5 @@
 import React from 'react';
+import twitchtweets from './img/twitchtweets/twitchtweets.png'
 import ford from './img/ford/ford.png';
 import engage from './img/engage/engage.png'
 import here from './img/here/here.png'
@@ -18,6 +19,8 @@ export class Project extends React.Component {
 
     projImage(id) {
         switch(id) {
+            case "twitchtweets":
+                return twitchtweets;
             case "ford":
                 return ford;
             case "engage":
